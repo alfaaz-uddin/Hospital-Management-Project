@@ -4,8 +4,8 @@ import java.awt.*;
 import java.awt.event.*;
 
 public class Menu extends JFrame implements MouseListener,ActionListener{
-	JLabel nameLabel, titleLabel, imgLabel;
-	JButton npBtn, dpBtn, pInfoBtn, pUpBtn, emInfoBtn, lgtBtn;
+	JLabel nameLabel, titleLabel, imgLabel, userLabel;
+	JButton npBtn, dpBtn, pInfoBtn, pUpBtn, drInfoBtn, lgtBtn;
 	Color color1, color2;
 	ImageIcon img;
 	Font font1, font2, font3;
@@ -29,7 +29,7 @@ public class Menu extends JFrame implements MouseListener,ActionListener{
 		panel.setLayout(null);
 		
 		nameLabel = new JLabel("AB Hospital");
-		nameLabel.setBounds(350,50,250,50);
+		nameLabel.setBounds(350,25,250,50);
 		nameLabel.setFont(font1);
 		panel.add(nameLabel);
 		
@@ -65,13 +65,13 @@ public class Menu extends JFrame implements MouseListener,ActionListener{
 		pUpBtn.addActionListener(this);
 		panel.add(pUpBtn);
 		
-		emInfoBtn = new JButton("DOCTOR INFO");
-		emInfoBtn.setBounds(100,320,175,40);
-		emInfoBtn.setBackground(Color.BLACK);
-		emInfoBtn.setForeground(Color.WHITE);
-		emInfoBtn.addMouseListener(this);
-		emInfoBtn.addActionListener(this);
-		panel.add(emInfoBtn);
+		drInfoBtn = new JButton("DOCTOR INFO");
+		drInfoBtn.setBounds(100,320,175,40);
+		drInfoBtn.setBackground(Color.BLACK);
+		drInfoBtn.setForeground(Color.WHITE);
+		drInfoBtn.addMouseListener(this);
+		drInfoBtn.addActionListener(this);
+		panel.add(drInfoBtn);
 		
 		lgtBtn = new JButton("LOGOUT");
 		lgtBtn.setBounds(100,380,175,40);
@@ -81,7 +81,7 @@ public class Menu extends JFrame implements MouseListener,ActionListener{
 		lgtBtn.addActionListener(this);
 		panel.add(lgtBtn);
 		
-		img = new ImageIcon("menu.png");
+		img = new ImageIcon("images/menu.png");
 		
 		imgLabel = new JLabel(img);
 		imgLabel.setBounds(500,150,256,256);
@@ -92,6 +92,10 @@ public class Menu extends JFrame implements MouseListener,ActionListener{
 		titleLabel.setFont(font2);
 		panel.add(titleLabel);
 		panel.add(titleLabel);
+		
+		userLabel = new JLabel("Welcome, ");
+		userLabel.setBounds(700,90,80,40);
+		panel.add(userLabel);
 		
 		panel.setBackground(color1);
 		this.add(panel);
@@ -115,9 +119,9 @@ public class Menu extends JFrame implements MouseListener,ActionListener{
 		} else if(me.getSource() == pUpBtn){
 			pUpBtn.setBackground(color2);
 			pUpBtn.setForeground(Color.WHITE);
-		} else if(me.getSource() == emInfoBtn){
-			emInfoBtn.setBackground(color2);
-			emInfoBtn.setForeground(Color.WHITE);
+		} else if(me.getSource() == drInfoBtn){
+			drInfoBtn.setBackground(color2);
+			drInfoBtn.setForeground(Color.WHITE);
 		} 
 	}
 	
@@ -137,16 +141,16 @@ public class Menu extends JFrame implements MouseListener,ActionListener{
 		} else if(me.getSource() == pUpBtn){
 			pUpBtn.setBackground(Color.BLACK);
 			pUpBtn.setForeground(Color.WHITE);
-		} else if(me.getSource() == emInfoBtn){
-			emInfoBtn.setBackground(Color.BLACK);
-			emInfoBtn.setForeground(Color.WHITE);
+		} else if(me.getSource() == drInfoBtn){
+			drInfoBtn.setBackground(Color.BLACK);
+			drInfoBtn.setForeground(Color.WHITE);
 		}
 	}
 	
 	public void actionPerformed(ActionEvent ae){
 		String command = ae.getActionCommand();
-		 if (ae.getSource() == npBtn) {
-			JOptionPane.showMessageDialog(this, "New patient admission form");
+		if (ae.getSource() == npBtn) {
+			//JOptionPane.showMessageDialog(this, "New patient admission form");
 			AddPatient ap = new AddPatient();
 			ap.setVisible(true);
 			this.setVisible(false);
@@ -162,27 +166,28 @@ public class Menu extends JFrame implements MouseListener,ActionListener{
 			this.setVisible(false);
 		}else if (ae.getSource() == pInfoBtn) {
 			//JOptionPane.showMessageDialog(this, "Pt info page");
-			Pinfo pi = new Pinfo();
+			PInfo pi = new PInfo();
 			pi.setVisible(true);
 			this.setVisible(false);
 		}
-		else if (ae.getSource() == emInfoBtn) {
-			JOptionPane.showMessageDialog(this, "DR. page");
-			/*EmpMenu em = new EmpMenu();
-			em.setVisible(true);
-			this.setVisible(false);*/
-		} else if (ae.getSource() == lgtBtn) {
-			JOptionPane.showMessageDialog(this, "Logout Successful!");
-			Login li = new Login();
-			li.setVisible(true);
+		else if (ae.getSource() == drInfoBtn) {
+			//JOptionPane.showMessageDialog(this, "DR. page");
+			DrMenu dm = new DrMenu();
+			dm.setVisible(true);
 			this.setVisible(false);
-		}
-		
-					/*JOptionPane.showMessageDialog(this, "Logout Successful!");
-					EmpMenu em = new EmpMenu();
-					em.setVisible(true);
-					this.setVisible(false);*/
-				
+		} else if (ae.getSource() == lgtBtn) {
+			int dialog = JOptionPane.YES_NO_OPTION;
+			int result = JOptionPane.showConfirmDialog(this, "Are you sure to Logout?", "Logout", dialog);
+			if(result == 0){
+				JOptionPane.showMessageDialog(this, "Logout Successful!");
+				Login li = new Login();
+				li.setVisible(true);
+				this.setVisible(false);
+			} else{
+				//kicu hbe na
 			}
+					
+		}
+	}
 		
 } 

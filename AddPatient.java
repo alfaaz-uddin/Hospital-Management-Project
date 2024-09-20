@@ -154,7 +154,7 @@ public class AddPatient extends JFrame implements MouseListener, ActionListener{
 		bckBtn.addActionListener(this);
 		panel.add(bckBtn);
 			
-		img = new ImageIcon("patient.png");
+		img = new ImageIcon("images/patient.png");
 		imgLabel = new JLabel(img);
 		imgLabel.setBounds(450,100,300,300);
 		panel.add(imgLabel);

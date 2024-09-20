@@ -148,6 +148,21 @@ public class Login extends JFrame implements MouseListener, ActionListener{
 		
 	public void actionPerformed(ActionEvent ae){
 		String command = ae.getActionCommand();
+		/*if(lgnBtn.getText().equals(command)){
+			String uname = userTF.getText();
+			String pass = passTF.getText();
+			if(uname.isEmpty() || pass.isEmpty()){
+				JOptionPane.showMessageDialog(this, "Username/password required!");
+			}else{
+				if(uname.equals("admin") && pass.equals("admin")){
+					JOptionPane.showMessageDialog(this, "Login Successful!");
+					Menu me = new Menu(uname,pass);
+					me.setVisible(true);
+					this.setVisible(false);
+				}else{
+					JOptionPane.showMessageDialog(this, "Invalid credentials!");
+				}
+			}*/
 		if(lgnBtn.getText().equals(command));{
 			Menu menu = new Menu();
 			menu.setVisible(true);

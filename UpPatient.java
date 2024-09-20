@@ -161,7 +161,7 @@ public class UpPatient extends JFrame implements MouseListener, ActionListener{
 		bckBtn.addActionListener(this);
 		panel.add(bckBtn);
 			
-		img = new ImageIcon("UpPatient.png");
+		img = new ImageIcon("images/UpPatient.png");
 		imgLabel = new JLabel(img);
 		imgLabel.setBounds(510,100,300,300);
 		panel.add(imgLabel);

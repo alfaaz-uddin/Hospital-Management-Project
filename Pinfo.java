@@ -3,7 +3,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class Pinfo extends JFrame implements MouseListener, ActionListener{
+public class PInfo extends JFrame implements MouseListener, ActionListener{
 	JLabel  hosLabel, pinfoLabel, pnLabel, mbLabel, genLabel, ageLabel, addLabel, refLabel, appLabel, roomLabel, disLabel, depLabel, imgLabel;
 	JRadioButton a1, a2, a3;
 	JButton serBtn, bckBtn;
@@ -14,8 +14,8 @@ public class Pinfo extends JFrame implements MouseListener, ActionListener{
 	Font f1, f2;
 	JPanel panel;
 		
-	public Pinfo(){
-		super("AB Hospital");
+	public PInfo(){
+		super("AB Hospital Limited");
 		this.setSize(900,600);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setLocationRelativeTo(null);
@@ -31,7 +31,7 @@ public class Pinfo extends JFrame implements MouseListener, ActionListener{
 			
 			
 			
-		hosLabel = new JLabel("AB Hospital");
+		hosLabel = new JLabel(" Hospital");
 		hosLabel.setBounds(380,30,600,50);
 		hosLabel.setFont(f1);
 		panel.add(hosLabel);
@@ -109,7 +109,7 @@ public class Pinfo extends JFrame implements MouseListener, ActionListener{
 		panel.add(serBtn);*/
 			
 		bckBtn = new JButton("BACK");
-		bckBtn.setBounds(600,470,88,40);
+		bckBtn.setBounds(650,470,88,40);
 		bckBtn.setBackground(Color.BLACK);
 		bckBtn.setForeground(Color.WHITE);
 		bckBtn.addMouseListener(this);
@@ -160,14 +160,14 @@ public class Pinfo extends JFrame implements MouseListener, ActionListener{
 		
 	public void actionPerformed(ActionEvent ae){
 		String command = ae.getActionCommand();
-		if (ae.getSource() == bckBtn) {
-			JOptionPane.showMessageDialog(this, "BACK!");
+		if((ae.getSource() == bckBtn));{
 			Menu me = new Menu();
 			me.setVisible(true);
+			this.setVisible(false);
 		}
 			
 		
 	}
 		
-		
+	
 }
