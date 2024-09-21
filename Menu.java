@@ -4,8 +4,8 @@ import java.awt.*;
 import java.awt.event.*;
 
 public class Menu extends JFrame implements MouseListener,ActionListener{
-	JLabel nameLabel, titleLabel, imgLabel, userLabel;
-	JButton npBtn, dpBtn, pInfoBtn, pUpBtn, drInfoBtn, lgtBtn;
+	JLabel nameLabel, titleLabel, imgLabel, userLabel, sumLabel, tAddLabel, tDisLabel, tDrLabel;
+	JButton npBtn, dpBtn, pInfoBtn, pUpBtn, drInfoBtn, lgtBtn, contBtn;
 	Color color1, color2;
 	ImageIcon img;
 	Font font1, font2, font3;
@@ -81,10 +81,19 @@ public class Menu extends JFrame implements MouseListener,ActionListener{
 		lgtBtn.addActionListener(this);
 		panel.add(lgtBtn);
 		
+		contBtn = new JButton("Contribution");
+		contBtn.setBounds(750,500,100,20);
+		contBtn.setBackground(color1);
+		contBtn.setBorder(null);
+		contBtn.addMouseListener(this);
+		contBtn.addActionListener(this);
+		panel.add(contBtn);
+		
 		img = new ImageIcon("images/menu.png");
 		
 		imgLabel = new JLabel(img);
-		imgLabel.setBounds(500,150,256,256);
+		//imgLabel.setBounds(500,150,256,256);
+		imgLabel.setBounds(350,150,256,256);
 		panel.add(imgLabel);
 		
 		titleLabel = new JLabel("“Health is not valued till sickness comes”");
@@ -96,6 +105,24 @@ public class Menu extends JFrame implements MouseListener,ActionListener{
 		userLabel = new JLabel("Welcome, ");
 		userLabel.setBounds(700,90,80,40);
 		panel.add(userLabel);
+		
+		sumLabel = new JLabel("At a glance:- ");
+		sumLabel.setBounds(700,120,80,40);
+		sumLabel.setFont(font3);
+		sumLabel.setForeground(Color.RED);
+		panel.add(sumLabel);
+		
+		tAddLabel = new JLabel("Total Admission: ");
+		tAddLabel.setBounds(700,150,110,40);
+		panel.add(tAddLabel);
+		
+		tDisLabel = new JLabel("Total Discharge: ");
+		tDisLabel.setBounds(700,170,110,40);
+		panel.add(tDisLabel);
+		
+		tDrLabel = new JLabel("Doctor Checkin: ");
+		tDrLabel.setBounds(700,190,110,40);
+		panel.add(tDrLabel);
 		
 		panel.setBackground(color1);
 		this.add(panel);
@@ -174,6 +201,11 @@ public class Menu extends JFrame implements MouseListener,ActionListener{
 			//JOptionPane.showMessageDialog(this, "DR. page");
 			DrMenu dm = new DrMenu();
 			dm.setVisible(true);
+			this.setVisible(false);
+		} else if (ae.getSource() == contBtn) {
+			//JOptionPane.showMessageDialog(this, "DR. page");
+			Contribution co = new Contribution();
+			co.setVisible(true);
 			this.setVisible(false);
 		} else if (ae.getSource() == lgtBtn) {
 			int dialog = JOptionPane.YES_NO_OPTION;
