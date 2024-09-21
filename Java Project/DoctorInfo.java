@@ -95,7 +95,7 @@ public class DoctorInfo extends JFrame implements MouseListener,ActionListener{
 		panel.add(userTF);
 
 		
-		add = new JButton("REMOVE");
+		add = new JButton("SEARCH");
 		add.setBounds(500,470,90,40);
 		add.setBackground(Color.GREEN);
 		add.setForeground(Color.WHITE);
@@ -147,14 +147,20 @@ public class DoctorInfo extends JFrame implements MouseListener,ActionListener{
 	}
 	
 	public void actionPerformed(ActionEvent ae){
-				if(ae.getSource() == add) {
-					DrMenu dm = new DrMenu();
-					dm.setVisible(true);
-					this.setVisible(false);
+		String command = ae.getActionCommand();
+		if(add.getText().equals(command));{
+			DoctorList dl = new DoctorList();
+			dl.setVisible(true);
+			this.setVisible(false);
 			
 		}	
-		 else if(ae.getSource() == back) {
-					DrMenu dm = new DrMenu();
+		
+		//public void actionPerformed(ActionEvent ae){
+		//String command = ae.getActionCommand();
+		    if(ae.getSource() == back) {
+				
+					JOptionPane.showMessageDialog(this, "Doctor info search successfully completed");
+					 DrMenu dm = new DrMenu();
 					dm.setVisible(true);
 					this.setVisible(false);
 				}	

@@ -127,11 +127,11 @@ public class DrMenu extends JFrame implements MouseListener,ActionListener{
 			AddDoctor ad = new AddDoctor();
 			ad.setVisible(true);
 			this.setVisible(false);
-        }/* else if (ae.getSource() == delBtn) {
-			PtDischarge pd = new PtDischarge();
-			pd.setVisible(true);
+        } else if (ae.getSource() == delBtn) {
+			DoctorInfo di = new DoctorInfo();
+			di.setVisible(true);
 			this.setVisible(false);
-        } */else if (ae.getSource() == showBtn) {
+        } else if (ae.getSource() == showBtn) {
 			DoctorList dl = new DoctorList();
 			dl.setVisible(true);
 			this.setVisible(false);

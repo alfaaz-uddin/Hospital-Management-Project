@@ -3,7 +3,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class DoctorList extends JFrame implements ActionListener{
+public class DoctorList extends JFrame{
 	
 	JLabel userLabel, passLabel, imgLabel;
 	//JTextField userTF;
@@ -58,14 +58,5 @@ public class DoctorList extends JFrame implements ActionListener{
 		panel.setBackground(color1);
 		this.add(panel);
 	}
-	
-	public void actionPerformed(ActionEvent ae){
-			if(ae.getSource() == back){
-					DrMenu dm = new DrMenu();
-					dm.setVisible(true);
-					this.setVisible(false);
-			}
-			
-		}
 	
 }

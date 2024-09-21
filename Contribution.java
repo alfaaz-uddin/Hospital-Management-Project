@@ -49,7 +49,6 @@ public class Contribution extends JFrame implements ActionListener{
 	public void actionPerformed(ActionEvent ae){
 		String command = ae.getActionCommand();
 		if (ae.getSource() == bckBtn) {
-			//JOptionPane.showMessageDialog(this, "New patient admission form");
 			Menu me = new Menu();
 			me.setVisible(true);
 			this.setVisible(false);

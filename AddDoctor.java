@@ -9,6 +9,7 @@ public class AddDoctor extends JFrame implements MouseListener,ActionListener{
 	JTextField userTF;
 	JPasswordField passTF;
 	JButton add, back;
+	ButtonGroup bg1;
 	JRadioButton r1,r2,r3;
 	JComboBox langs;
 	Color color1,color2;
@@ -37,19 +38,18 @@ public class AddDoctor extends JFrame implements MouseListener,ActionListener{
 		panel.setLayout(null);
 		
 		userLabel = new JLabel("AB Hospital ");
-		userLabel.setBounds(300,10,400,100); //x,y,width,length
+		userLabel.setBounds(300,10,400,100); 
 		userLabel.setFont(font1);
 		panel.add(userLabel);
 		
 		
 		userLabel = new JLabel("Add Doctor Form ");
 		userLabel.setBounds(130,80,400,50);
-        userLabel.setFont(font4);		//x,y,width,length
+        userLabel.setFont(font4);		
 		panel.add(userLabel);
 		
 		userLabel = new JLabel("Doctor Name: ");
-		userLabel.setBounds(75,120,100,100); //x,y,width,length
-		//userLabel.setForeground(Color.RED);
+		userLabel.setBounds(75,120,100,100); 
 		panel.add(userLabel);	
 		
 		userTF = new JTextField();
@@ -57,7 +57,7 @@ public class AddDoctor extends JFrame implements MouseListener,ActionListener{
 		panel.add(userTF);
 		
 		userLabel = new JLabel("Mobile Number: ");
-		userLabel.setBounds(75,150,100,100); //x,y,width,length
+		userLabel.setBounds(75,150,100,100); 
 		panel.add(userLabel);
 
 		userTF = new JTextField();
@@ -83,13 +83,11 @@ public class AddDoctor extends JFrame implements MouseListener,ActionListener{
 		r3.setBackground(color1);
 		panel.add(r3);
 		
-		/*userLabel = new JLabel("Doctor Age: ");
-		userLabel.setBounds(50,210,100,100); //x,y,width,length
-		panel.add(userLabel);
+		bg1 = new ButtonGroup();
+		bg1.add(r1);
+		bg1.add(r2);
+		bg1.add(r3);
 		
-		userTF = new JTextField();
-		userTF.setBounds(150,250,150,20);
-		panel.add(userTF);*/
 		
 		programLabel = new JLabel("Department:");
 		programLabel.setBounds(75,210,100,100);
@@ -101,7 +99,7 @@ public class AddDoctor extends JFrame implements MouseListener,ActionListener{
 		panel.add(langs);
 		
 		userLabel = new JLabel("Joining Date: ");
-		userLabel.setBounds(75,240,100,100); //x,y,width,length
+		userLabel.setBounds(75,240,100,100); 
 		panel.add(userLabel);
 		
 		userTF = new JTextField();
@@ -109,7 +107,7 @@ public class AddDoctor extends JFrame implements MouseListener,ActionListener{
 		panel.add(userTF);
 		
 		userLabel = new JLabel("Salary: ");
-		userLabel.setBounds(75,270,100,100); //x,y,width,length
+		userLabel.setBounds(75,270,100,100); 
 		panel.add(userLabel);
 		
 		userTF = new JTextField();
@@ -117,7 +115,7 @@ public class AddDoctor extends JFrame implements MouseListener,ActionListener{
 		panel.add(userTF);
 		
 		userLabel = new JLabel("Room NO: ");
-		userLabel.setBounds(75,300,100,100); //x,y,width,length
+		userLabel.setBounds(75,300,100,100); 
 		panel.add(userLabel);
 		
 		userTF = new JTextField();
@@ -125,25 +123,17 @@ public class AddDoctor extends JFrame implements MouseListener,ActionListener{
 		panel.add(userTF);
 		
 		userLabel = new JLabel("BM&DC REG: ");
-		userLabel.setBounds(75,330,100,100); //x,y,width,length
+		userLabel.setBounds(75,330,100,100); 
 		panel.add(userLabel);
 		
 		userTF = new JTextField();
 		userTF.setBounds(170,370,150,20);
 		panel.add(userTF);
 		
-		/*programLabel = new JLabel("ID Type:");
-		programLabel.setBounds(50,390,100,100);
-		panel.add(programLabel);
-		
-		String types[] = {"NID", "BIRTH CERTIFI.", "BMDC REG.", "NONE"};
-		langs = new JComboBox(types);
-		langs.setBounds(150,430,150,20);
-		panel.add(langs);*/
 		
 		add = new JButton("ADD");
 		add.setBounds(500,470,100,40);
-		add.setBackground(Color.BLACK);
+		add.setBackground(Color.GREEN);
 		add.setForeground(Color.WHITE);
 		add.setOpaque(true);
 		add.addMouseListener(this);
@@ -152,14 +142,14 @@ public class AddDoctor extends JFrame implements MouseListener,ActionListener{
 		
 		back = new JButton("BACK");
 		back.setBounds(620,470,100,40);
-		back.setBackground(Color.BLACK);
+		back.setBackground(Color.RED);
 		back.setForeground(Color.WHITE);
 		back.setOpaque(true);
 		back.addMouseListener(this);
 		back.addActionListener(this);
 		panel.add(back);
 		
-		img = new ImageIcon("images/dr-info.png");
+		img = new ImageIcon("emp-info.png");
 		
 		imgLabel = new JLabel(img);
 		imgLabel.setBounds(485,100,300,300);
@@ -193,11 +183,10 @@ public class AddDoctor extends JFrame implements MouseListener,ActionListener{
 	}
 	
 	public void actionPerformed(ActionEvent ae){
-		String command = ae.getActionCommand();
-		if(add.getText().equals(command));{
-			DoctorList dl = new DoctorList();
-			dl.setVisible(true);
-			this.setVisible(false);
+			if(ae.getSource() == add){
+					DrMenu dm = new DrMenu();
+					dm.setVisible(true);
+					this.setVisible(false);
 			
 		}
 		//public void actionPerformed(ActionEvent ae){
