@@ -37,7 +37,7 @@ public class AddDoctor extends JFrame implements MouseListener,ActionListener{
 		panel = new JPanel();
 		panel.setLayout(null);
 		
-		userLabel = new JLabel("AB Hospital ");
+		userLabel = new JLabel("HealthMate ");
 		userLabel.setBounds(300,10,400,100); 
 		userLabel.setFont(font1);
 		panel.add(userLabel);

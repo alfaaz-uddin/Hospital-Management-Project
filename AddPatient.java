@@ -17,7 +17,7 @@ public class AddPatient extends JFrame implements MouseListener, ActionListener{
 	JPanel panel;
 		
 	public AddPatient(){
-		super("AB Hospital");
+		super("HealthMate");
 		this.setSize(900,600);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setLocationRelativeTo(null);
@@ -33,7 +33,7 @@ public class AddPatient extends JFrame implements MouseListener, ActionListener{
 			
 			
 			
-		hosLabel = new JLabel("AB Hospital");
+		hosLabel = new JLabel("HealthMate");
 		hosLabel.setBounds(300,30,600,50);
 		hosLabel.setFont(f1);
 		panel.add(hosLabel);

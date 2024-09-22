@@ -12,7 +12,7 @@ public class Menu extends JFrame implements MouseListener,ActionListener{
 	JPanel panel;
 	
 	public Menu(){
-		super("AB Hospital");
+		super("HealthMate");
 		this.setSize(900,600);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setLocationRelativeTo(null); 
@@ -28,8 +28,8 @@ public class Menu extends JFrame implements MouseListener,ActionListener{
 		panel = new JPanel();
 		panel.setLayout(null);
 		
-		nameLabel = new JLabel("AB Hospital");
-		nameLabel.setBounds(350,25,250,50);
+		nameLabel = new JLabel("HealthMate");
+		nameLabel.setBounds(380,25,250,50);
 		nameLabel.setFont(font1);
 		panel.add(nameLabel);
 		

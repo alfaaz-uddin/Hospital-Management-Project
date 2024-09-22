@@ -31,7 +31,7 @@ public class DoctorList extends JFrame{
 		panel = new JPanel();
 		panel.setLayout(null);
 		
-		userLabel = new JLabel("AB Hospital ");
+		userLabel = new JLabel("HealthMate ");
 		userLabel.setBounds(350,10,400,100); 
 		userLabel.setFont(font1);
 		panel.add(userLabel);

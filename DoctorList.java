@@ -31,7 +31,7 @@ public class DoctorList extends JFrame implements ActionListener{
 		panel = new JPanel();
 		panel.setLayout(null);
 		
-		userLabel = new JLabel("AB Hospital ");
+		userLabel = new JLabel("HealthMate ");
 		userLabel.setBounds(350,10,400,100); 
 		userLabel.setFont(font1);
 		panel.add(userLabel);
@@ -47,7 +47,7 @@ public class DoctorList extends JFrame implements ActionListener{
 		back.setForeground(Color.WHITE);
 		back.setOpaque(true);
 		//back.addMouseListener(this);
-		//back.addActionListener(this);
+		back.addActionListener(this);
 		panel.add(back);
 		
 		img = new ImageIcon("emp-info.png");

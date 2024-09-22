@@ -15,7 +15,7 @@ public class PInfo extends JFrame implements MouseListener, ActionListener{
 	JPanel panel;
 		
 	public PInfo(){
-		super("AB Hospital Limited");
+		super("HealthMate");
 		this.setSize(900,600);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setLocationRelativeTo(null);
@@ -31,7 +31,7 @@ public class PInfo extends JFrame implements MouseListener, ActionListener{
 			
 			
 			
-		hosLabel = new JLabel(" Hospital");
+		hosLabel = new JLabel("HealthMate");
 		hosLabel.setBounds(380,30,600,50);
 		hosLabel.setFont(f1);
 		panel.add(hosLabel);

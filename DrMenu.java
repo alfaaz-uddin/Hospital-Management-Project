@@ -11,7 +11,7 @@ public class DrMenu extends JFrame implements MouseListener,ActionListener{
 	Font font1, font2, font3;
 	JPanel panel;
 	public DrMenu(){
-		super("AB Hospital");
+		super("HealthMate");
 		this.setSize(900,600);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setLocationRelativeTo(null);
@@ -27,7 +27,7 @@ public class DrMenu extends JFrame implements MouseListener,ActionListener{
 		panel = new JPanel();
 		panel.setLayout(null);
 		
-		nameLabel = new JLabel("AB Hospital");
+		nameLabel = new JLabel("HealthMate");
 		nameLabel.setBounds(350,50,250,50);
 		nameLabel.setForeground(Color.BLACK);
 		nameLabel.setFont(font1);

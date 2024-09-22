@@ -16,7 +16,7 @@ public class PtDischarge extends JFrame implements ActionListener {
 	JPanel panel;
 	
 	public PtDischarge(){
-		super("AB Hospital");
+		super("HealthMate");
 		this.setSize(900,600);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setLocationRelativeTo(null);
@@ -32,8 +32,8 @@ public class PtDischarge extends JFrame implements ActionListener {
 		panel = new JPanel();
 		panel.setLayout(null);
 		
-		nameLabel = new JLabel("AB Hospital");
-		nameLabel.setBounds(350,30,250,40);
+		nameLabel = new JLabel("HealthMate");
+		nameLabel.setBounds(380,30,250,40);
 		nameLabel.setFont(font1);
 		panel.add(nameLabel);
 		

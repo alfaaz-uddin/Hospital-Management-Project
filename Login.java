@@ -16,7 +16,7 @@ public class Login extends JFrame implements MouseListener, ActionListener{
 	
 	
 	public Login(){
-		super("AB Hospital");
+		super("HealthMate");
 		this.setSize(900,600);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setLocationRelativeTo(null);
@@ -31,7 +31,7 @@ public class Login extends JFrame implements MouseListener, ActionListener{
 		panel = new JPanel();
 		panel.setLayout(null);
 		
-		nameLabel = new JLabel("AB Hospital");
+		nameLabel = new JLabel("HealthMate");
 		nameLabel.setBounds(380,180,250,40);
 		nameLabel.setFont(font1);
 		panel.add(nameLabel);
