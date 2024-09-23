@@ -7,13 +7,15 @@ public class Menu extends JFrame implements MouseListener,ActionListener{
 	JLabel nameLabel, titleLabel, imgLabel, userLabel, sumLabel, tAddLabel, tDisLabel, tDrLabel;
 	JButton npBtn, dpBtn, pInfoBtn, pUpBtn, drInfoBtn, lgtBtn, contBtn;
 	Color color1, color2;
-	ImageIcon img;
+	ImageIcon img, icon;
 	Font font1, font2, font3;
 	JPanel panel;
 	
 	public Menu(){
 		super("HealthMate");
 		this.setSize(900,600);
+		icon = new ImageIcon("images/icon.png");
+		this.setIconImage(icon.getImage());
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setLocationRelativeTo(null); 
 		
