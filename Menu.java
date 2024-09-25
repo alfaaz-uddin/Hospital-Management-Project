@@ -114,6 +114,7 @@ public class Menu extends JFrame implements MouseListener,ActionListener{
 		sumLabel.setForeground(Color.RED);
 		panel.add(sumLabel);
 		
+
 		tAddLabel = new JLabel("Total Admission: ");
 		tAddLabel.setBounds(700,150,110,40);
 		panel.add(tAddLabel);
@@ -121,8 +122,9 @@ public class Menu extends JFrame implements MouseListener,ActionListener{
 		tDisLabel = new JLabel("Total Discharge: ");
 		tDisLabel.setBounds(700,170,110,40);
 		panel.add(tDisLabel);
-		
-		tDrLabel = new JLabel("Doctor Checkin: ");
+
+		//RegDoctorList rdl = new RegDoctorList();
+		tDrLabel = new JLabel("Doctor Checkin: ");//+rdl.getDoctorCount()
 		tDrLabel.setBounds(700,190,110,40);
 		panel.add(tDrLabel);
 		
