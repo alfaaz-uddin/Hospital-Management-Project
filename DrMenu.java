@@ -122,7 +122,7 @@ public class DrMenu extends JFrame implements MouseListener,ActionListener{
 	}
 	
 	public void actionPerformed(ActionEvent ae){
-		String command = ae.getActionCommand();
+		/*String command = ae.getActionCommand();
 		if (ae.getSource() == addBtn) {
 			AddDoctor ad = new AddDoctor();
 			ad.setVisible(true);
@@ -135,7 +135,7 @@ public class DrMenu extends JFrame implements MouseListener,ActionListener{
 			DoctorList dl = new DoctorList();
 			dl.setVisible(true);
 			this.setVisible(false);
-		}else if (ae.getSource() == backBtn) {
+		}else */if (ae.getSource() == backBtn) {
 			
 			Menu me = new Menu();
 			me.setVisible(true);

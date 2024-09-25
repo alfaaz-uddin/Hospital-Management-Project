@@ -104,8 +104,8 @@ public class Menu extends JFrame implements MouseListener,ActionListener{
 		panel.add(titleLabel);
 		panel.add(titleLabel);
 		
-		userLabel = new JLabel("Welcome, ");
-		userLabel.setBounds(700,90,80,40);
+		userLabel = new JLabel("Welcome back,");
+		userLabel.setBounds(700,90,100,40);
 		panel.add(userLabel);
 		
 		sumLabel = new JLabel("At a glance:- ");
@@ -179,33 +179,27 @@ public class Menu extends JFrame implements MouseListener,ActionListener{
 	public void actionPerformed(ActionEvent ae){
 		String command = ae.getActionCommand();
 		if (ae.getSource() == npBtn) {
-			//JOptionPane.showMessageDialog(this, "New patient admission form");
 			AddPatient ap = new AddPatient();
 			ap.setVisible(true);
 			this.setVisible(false);
         } else if (ae.getSource() == dpBtn) {
-			//JOptionPane.showMessageDialog(this, "Pt. Discharge page");
 			PtDischarge pd = new PtDischarge();
 			pd.setVisible(true);
 			this.setVisible(false);
         } else if (ae.getSource() == pUpBtn) {
-			//JOptionPane.showMessageDialog(this, "Pt. update page");
 			UpPatient up = new UpPatient();
 			up.setVisible(true);
 			this.setVisible(false);
 		}else if (ae.getSource() == pInfoBtn) {
-			//JOptionPane.showMessageDialog(this, "Pt info page");
 			PInfo pi = new PInfo();
 			pi.setVisible(true);
 			this.setVisible(false);
 		}
 		else if (ae.getSource() == drInfoBtn) {
-			//JOptionPane.showMessageDialog(this, "DR. page");
 			DrMenu dm = new DrMenu();
 			dm.setVisible(true);
 			this.setVisible(false);
 		} else if (ae.getSource() == contBtn) {
-			//JOptionPane.showMessageDialog(this, "DR. page");
 			Contribution co = new Contribution();
 			co.setVisible(true);
 			this.setVisible(false);
