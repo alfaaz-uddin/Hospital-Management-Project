@@ -104,8 +104,7 @@ public class AddDoctor extends JFrame implements MouseListener,ActionListener{
 		programLabel.setBounds(75,210,100,100);
 		panel.add(programLabel);
 		
-		String items[] = {"CARDIOLOGY", "NEUROSURGERY", "ONCOLOGIST", "ORTHOPEDICS","SURGERY","PSYCHIATRY","ANESTHESIOLOGY"
-};
+		String items[] = {"MEDICINE","CARDIOLOGY", "NEUROSURGERY", "ONCOLOGIST", "ORTHOPEDICS","SURGERY","PSYCHIATRY","ANESTHESIOLOGY"};
 		langs = new JComboBox(items);
 		langs.setBounds(170,250,150,20);
 		panel.add(langs);

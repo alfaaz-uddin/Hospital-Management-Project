@@ -88,8 +88,12 @@ public class RegDoctorList{
 	public Doctor getDoctor(int index){
 		return doctorList[index];
 	}
+
+	public int getDoctorCount() {
+        return doctorCount;
+    }
 	
-	public void deleteDoctor(Doctor d){
+	/*public void deleteDoctor(Doctor d){
 		for(int i = 0; i<doctorCount; i++){
 			if(doctorList[i] == d){
 				for(int j = i; j<doctorCount-1; j++){
@@ -100,7 +104,7 @@ public class RegDoctorList{
 				break;
 			}
 		}
-	}
+	}*/
 	
 	
 }
