@@ -20,7 +20,7 @@ public class RegDoctorList{
 					String line8 = sc.nextLine();  //pass
 					String line9 = sc.nextLine();  //extra newline
 					
-					//printing them to cmd just to see if they are getting added to the list or not
+					
 				 	System.out.println(line1);
 					System.out.println(line2);
 					System.out.println(line3);
@@ -30,7 +30,6 @@ public class RegDoctorList{
 					System.out.println(line7);
 					System.out.println(line8);
 					
-					//user u = new user("sadia","1234","Female","1/JAN/1990","Mirpur");
 					Doctor d = new Doctor(line1,line2,line3,line4,line5,line6,line7,line8);
 					doctorList[doctorCount] = d;
 					doctorCount++;
@@ -38,16 +37,11 @@ public class RegDoctorList{
 				}
 			sc.close();   //closing the file 		
 		}catch(Exception ex){
-			//System.out.println(ex);
+
 			System.out.println("File not found.");
 			return;
 		}
-		/*Doctor d1 = new Doctor("1001","Alfaz", "Male", "01745215623", "Cardiology", "4/JAN/2022", "321", "alfaz00");
-		doctorList[doctorCount] = d1;
-		doctorCount++;
 		
-		Doctor d2 = new Doctor("1002","Kazi", "Male", "01548751085", "Oncologist", "16/SEP/2023", "456", "3009782");
-		doctorList[doctorCount++] = d2;*/
 	}
 	
 	public void addDoctor(Doctor d){
@@ -88,10 +82,9 @@ public class RegDoctorList{
 	public Doctor getDoctor(int index){
 		return doctorList[index];
 	}
+	
+	//String DList[] = doctorList[].getName;
 
-	public int getDoctorCount() {
-        return doctorCount;
-    }
 	
 	/*public void deleteDoctor(Doctor d){
 		for(int i = 0; i<doctorCount; i++){

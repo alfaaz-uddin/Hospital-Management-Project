@@ -6,9 +6,9 @@ import java.awt.event.*;
 public class AddDoctor extends JFrame implements MouseListener,ActionListener{
 	
 	//private int slN;
-	private static int nextSlN = 2001;
-	JLabel idLabel, userLabel,passLabel,genderLabel,programLabel,frame,imgLabel,conpLabel;
-	JTextField idTF, userTF, nmTF, dateTF, bmdcTF;
+	//private static int nextSlN = 2001;
+	JLabel idField,idLabel, userLabel,passLabel,genderLabel,programLabel,frame,imgLabel,conpLabel;
+	JTextField  userTF, nmTF, dateTF, bmdcTF;
 	JPasswordField passTF,conpTF;
 	JButton add, backBtn;
 	ButtonGroup bg1;
@@ -22,14 +22,14 @@ public class AddDoctor extends JFrame implements MouseListener,ActionListener{
 	
 	public AddDoctor(RegDoctorList rdl){
 		
-		super("Doctor Information");
+		super("HealthMate - Doctor Registration");
 		this.setSize(900,600);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setLocationRelativeTo(null);
 		this.rdl = rdl;
 	
 		color1= new Color(143,207,225);
-		color2= new Color(39,83,23);
+		color2= new Color(4,196,95);
 		
 		font1 = new Font("Biome",Font.BOLD, 30);
 		font2 = new Font("Cascadia Code SemiBold",Font.PLAIN, 20);
@@ -47,24 +47,24 @@ public class AddDoctor extends JFrame implements MouseListener,ActionListener{
 		
 		
 		userLabel = new JLabel("Doctor Registration Form ");
-		userLabel.setBounds(130,80,450,50);
+		userLabel.setBounds(130,80,450,30);
         userLabel.setFont(font4);		
 		panel.add(userLabel);
 		
 		idLabel = new JLabel("Doctor ID: ");
-		idLabel.setBounds(75,100,100,100); 
+		idLabel.setBounds(75,91,100,100); 
 		panel.add(idLabel);
 		
-		idTF = new JTextField("DID"+nextSlN);
-		idTF.setBounds(170,137,150,20);
-		panel.add(idTF);
+		idField = new JLabel("DID"+2001+rdl.doctorCount);
+		idField.setBounds(170,130,100,20);
+		panel.add(idField);
 		
 		userLabel = new JLabel("Doctor Name: ");
 		userLabel.setBounds(75,120,100,100); 
 		panel.add(userLabel);	
 		
 		userTF = new JTextField();
-		userTF.setBounds(170,162,150,20);
+		userTF.setBounds(170,162,200,20);
 		panel.add(userTF);
 		
 		userLabel = new JLabel("Mobile Number: ");
@@ -72,7 +72,7 @@ public class AddDoctor extends JFrame implements MouseListener,ActionListener{
 		panel.add(userLabel);
 
 		nmTF = new JTextField();
-		nmTF.setBounds(170,190,150,20);
+		nmTF.setBounds(170,190,200,20);
 		panel.add(nmTF);
 		
 		genderLabel = new JLabel("Gender:");
@@ -80,7 +80,7 @@ public class AddDoctor extends JFrame implements MouseListener,ActionListener{
 		panel.add(genderLabel);
 		
 		r1 = new JRadioButton("Male");
-		r1.setBounds(150,220,80,20);
+		r1.setBounds(163,220,70,20);
 		r1.setBackground(color1);
 		panel.add(r1);
 		
@@ -90,7 +90,7 @@ public class AddDoctor extends JFrame implements MouseListener,ActionListener{
 		panel.add(r2);
 		
 		r3 = new JRadioButton("Other");
-		r3.setBounds(320,220,80,20);
+		r3.setBounds(310,220,80,20);
 		r3.setBackground(color1);
 		panel.add(r3);
 		
@@ -106,7 +106,7 @@ public class AddDoctor extends JFrame implements MouseListener,ActionListener{
 		
 		String items[] = {"MEDICINE","CARDIOLOGY", "NEUROSURGERY", "ONCOLOGIST", "ORTHOPEDICS","SURGERY","PSYCHIATRY","ANESTHESIOLOGY"};
 		langs = new JComboBox(items);
-		langs.setBounds(170,250,150,20);
+		langs.setBounds(170,250,200,20);
 		panel.add(langs);
 		
 		userLabel = new JLabel("Joining Date: ");
@@ -114,7 +114,7 @@ public class AddDoctor extends JFrame implements MouseListener,ActionListener{
 		panel.add(userLabel);
 		
 		dateTF = new JTextField();
-		dateTF.setBounds(170,280,150,20);
+		dateTF.setBounds(170,280,200,20);
 		panel.add(dateTF);
 		
 		
@@ -123,7 +123,7 @@ public class AddDoctor extends JFrame implements MouseListener,ActionListener{
 		panel.add(userLabel);
 		
 		bmdcTF = new JTextField();
-		bmdcTF.setBounds(170,310,150,20);
+		bmdcTF.setBounds(170,310,200,20);
 		panel.add(bmdcTF);
 		
 		
@@ -133,20 +133,20 @@ public class AddDoctor extends JFrame implements MouseListener,ActionListener{
 		panel.add(passLabel);
 		
 		passTF = new JPasswordField();
-		passTF.setBounds(170,338,150,20);
+		passTF.setBounds(170,338,200,20);
 		panel.add(passTF);
 		
 		conpLabel = new JLabel("Confirm Password : ");
-		conpLabel.setBounds(75,324,120,100); 
+		conpLabel.setBounds(75,328,120,100); 
 		panel.add(conpLabel);
 		
 		conpTF = new JPasswordField();
-		conpTF.setBounds(205,368,120,20);
+		conpTF.setBounds(195,368,175,20);
 		panel.add(conpTF);
 		
 		add = new JButton("Register");
 		add.setBounds(500,470,100,40);
-		add.setBackground(Color.GREEN);
+		add.setBackground(color2);
 		add.setForeground(Color.WHITE);
 		add.setOpaque(true);
 		add.addMouseListener(this);
@@ -179,16 +179,16 @@ public class AddDoctor extends JFrame implements MouseListener,ActionListener{
 	public void mouseReleased(MouseEvent me){}
 	public void mouseEntered(MouseEvent me){
 		if(me.getSource() == add){
-			add.setBackground(Color.RED);
-	add.setForeground(Color.WHITE);
+			add.setBackground(color2);
+			add.setForeground(Color.WHITE);
 		}else if(me.getSource() == backBtn){
-			backBtn.setBackground(Color.GREEN);
+			backBtn.setBackground(Color.RED);
 			backBtn.setForeground(Color.BLACK);
 		}
 	}
 	public void mouseExited(MouseEvent me){
 		if(me.getSource() == add){
-			add.setBackground(Color.GREEN);
+			add.setBackground(color2);
 			add.setForeground(Color.BLACK);
 		}else if(me.getSource() == backBtn){
 			backBtn.setBackground(Color.RED);
@@ -205,7 +205,7 @@ public class AddDoctor extends JFrame implements MouseListener,ActionListener{
 		   }
 	
 		else if(ae.getSource() == add){
-			String id = idTF.getText();
+			String id = idField.getText();
 			String name = userTF.getText();
 			String mobileNo = nmTF.getText();
 			
@@ -233,12 +233,12 @@ public class AddDoctor extends JFrame implements MouseListener,ActionListener{
 					
 					//RegDoctorList rdl = new RegDoctorList(); 
 					rdl.addDoctor(d);
-					nextSlN++;
+					//nextSlN++;
 					DrLogin dlg = new DrLogin(rdl);
 					dlg.setVisible(true);
 					this.setVisible(false);
 					//this.slN = nextSlN++;
-					this.nextSlN = nextSlN;	
+					//this.nextSlN = nextSlN;	
 				}else{
 					JOptionPane.showMessageDialog(this, "Password doesn't match!");
 				}

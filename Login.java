@@ -12,14 +12,16 @@ public class Login extends JFrame implements MouseListener, ActionListener{
 	JPanel panel;
 	Font font1,font2,font3;
 	Color color1, color2,color3;
-	ImageIcon img;
+	ImageIcon img,icon;
 	
 	
 	public Login(){
-		super("HealthMate");
+		super("HealthMate - Admin Login");
 		this.setSize(900,600);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setLocationRelativeTo(null);
+		icon = new ImageIcon("images/icon.png");
+		this.setIconImage(icon.getImage());
 		
 		font1 = new Font("Biome",Font.BOLD, 23);
 		font2 = new Font("Biome",Font.BOLD, 20);
@@ -184,7 +186,7 @@ public class Login extends JFrame implements MouseListener, ActionListener{
 				JOptionPane.showMessageDialog(this, "Username/password required!");
 			}else{
 				if((name.equals("admin") && pass.equals("admin")) || (name.equals("admin-1") && pass.equals("admin-1"))){
-					JOptionPane.showMessageDialog(this, "Login Successful!");
+					//JOptionPane.showMessageDialog(this, "Login Successful!");
 					Menu me = new Menu();
 					me.setVisible(true);
 					this.setVisible(false);

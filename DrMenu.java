@@ -131,11 +131,11 @@ public class DrMenu extends JFrame implements MouseListener,ActionListener{
 			DoctorInfo di = new DoctorInfo();
 			di.setVisible(true);
 			this.setVisible(false);
-        } else if (ae.getSource() == showBtn) {
+        } else*/ if (ae.getSource() == showBtn) {
 			DoctorList dl = new DoctorList();
 			dl.setVisible(true);
 			this.setVisible(false);
-		}else */if (ae.getSource() == backBtn) {
+		}else if (ae.getSource() == backBtn) {
 			
 			Menu me = new Menu();
 			me.setVisible(true);

@@ -16,7 +16,7 @@ public class PtDischarge extends JFrame  implements  ActionListener  {
 	JPanel panel;
 	
 	public PtDischarge(){
-		super("AB Hospital");
+		super("HealthMate - Patient Discharge");
 		this.setSize(900,600);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setLocationRelativeTo(null);

@@ -18,7 +18,7 @@ public class DoctorInfo extends JFrame implements MouseListener,ActionListener{
 	
 	public DoctorInfo(){
 		
-		super("Updated Doctor List");
+		super("Doctor List");
 		this.setSize(900,600);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setLocationRelativeTo(null);

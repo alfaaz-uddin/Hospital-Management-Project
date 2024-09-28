@@ -5,8 +5,8 @@ import java.awt.event.*;
 
 
 public class AddPatient extends JFrame implements MouseListener, ActionListener{
-	JLabel  hosLabel, pafLabel, pnLabel, mbLabel, genLabel, ageLabel, addLabel, refLabel, appLabel, roomLabel, disLabel, depLabel, imgLabel;
-	JTextField pnTF, mbTF, addTF, refTF, ageTF, disTF, depTF;
+	JLabel  hosLabel, pafLabel,pIdLabel, pnLabel, mbLabel, genLabel, ageLabel, addLabel, refLabel, appLabel, roomLabel, disLabel, depLabel, imgLabel;
+	JTextField pIdTF, pnTF, mbTF, addTF, refTF, ageTF, disTF, depTF;
 	JRadioButton a1, a2, a3;
 	JButton addBtn, bckBtn;
 	ButtonGroup gBtn;
@@ -15,12 +15,15 @@ public class AddPatient extends JFrame implements MouseListener, ActionListener{
 	ImageIcon img;
 	Font f1, f2;
 	JPanel panel;
+	PList pl;
+	
 		
-	public AddPatient(){
+	public AddPatient(PList pl){
 		super("HealthMate");
 		this.setSize(900,600);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setLocationRelativeTo(null);
+		this.pl = pl;
 		
 		c1 = new Color(143,207,225);
 		c2 = new Color(4,196,95);
@@ -43,39 +46,48 @@ public class AddPatient extends JFrame implements MouseListener, ActionListener{
 		pafLabel.setBounds(125,60,400,50);
 		pafLabel.setFont(f2);
 		panel.add(pafLabel);
+		
+		
+		pIdLabel = new JLabel("Patient ID :");
+		pIdLabel.setBounds(75,120,90,20);
+		panel.add(pIdLabel);
+			
+		pIdTF = new JTextField();
+		pIdTF.setBounds(170,121,200,20);
+		panel.add(pIdTF);
 			 
 		pnLabel = new JLabel("Patient Name :");
-		pnLabel.setBounds(75,120,90,20);
-			panel.add(pnLabel);
+		pnLabel.setBounds(75,150,90,20);
+		panel.add(pnLabel);
 			
 		pnTF = new JTextField();
-		pnTF.setBounds(170,121,200,20);
+		pnTF.setBounds(170,151,200,20);
 		panel.add(pnTF);
 			
 		mbLabel = new JLabel("Mobile Number :");
-		mbLabel.setBounds(75,160,110,20);
+		mbLabel.setBounds(75,190,110,20);
 		panel.add(mbLabel);
 			
 		mbTF = new JTextField();
-		mbTF.setBounds(170,160,200,20);
+		mbTF.setBounds(170,190,200,20);
 		panel.add(mbTF);
 			
 		genLabel = new JLabel("Gender :");
-		genLabel.setBounds(75,190,80,20);
+		genLabel.setBounds(75,220,80,20);
 		panel.add(genLabel);
 			
 		a1 = new JRadioButton("Male");
-		a1.setBounds(165,192,60,20);
+		a1.setBounds(165,222,60,20);
 		a1.setBackground(c1);
 		panel.add(a1);
 			
 		a2 = new JRadioButton("Female");
-		a2.setBounds(235,192,80,20);
+		a2.setBounds(235,222,80,20);
 		a2.setBackground(c1);
 		panel.add(a2);
 			
 		a3 = new JRadioButton("Other");
-		a3.setBounds(310,192,80,20);
+		a3.setBounds(310,222,80,20);
 		a3.setBackground(c1);
 		panel.add(a3);
 			
@@ -85,57 +97,57 @@ public class AddPatient extends JFrame implements MouseListener, ActionListener{
 		gBtn.add(a3);
 			
 		ageLabel = new JLabel("Age :");
-		ageLabel.setBounds(75,220,90,20);
+		ageLabel.setBounds(75,250,90,20);
 		panel.add(ageLabel);
 			
 		ageTF = new JTextField();
-		ageTF.setBounds(172,220,93,20);
+		ageTF.setBounds(172,250,93,20);
 		panel.add(ageTF);
 			
 		addLabel = new JLabel("Address :");
-		addLabel.setBounds(75,250,90,20);
+		addLabel.setBounds(75,280,90,20);
 		panel.add(addLabel);
 			
 		addTF = new JTextField();
-		addTF.setBounds(172,250,200,20);
+		addTF.setBounds(172,280,200,20);
 		panel.add(addTF);
 			
 			
 		
 			
 		appLabel = new JLabel("Appointed Dr. :");
-		appLabel.setBounds(75,280,90,20);
+		appLabel.setBounds(75,310,90,20);
 		panel.add(appLabel);
-			
-		String dr[] = {"Choose a Doctor", "Dr.Shamim.", "Dr.Alfaz", "Dr.Kazi" };
+		
+		String dr[] = {"Choose a Doctor", "Dr. Shamim", "Dr. Alfaz", "Dr. Kazi" };
 		 b1 = new JComboBox(dr);
-		 b1.setBounds(175,280,90,20);
+		 b1.setBounds(175,310,90,20);
 		panel.add(b1);
 			
 			
 		roomLabel = new JLabel("Allocated Room:");
-		roomLabel.setBounds(75,310,100,20);
+		roomLabel.setBounds(75,340,100,20);
 		panel.add(roomLabel);
 			
 		String rm[] = {"101", "102", "103", "104", "105",};
 		 b2 = new JComboBox(rm);
-		 b2.setBounds(175,310,90,20);
+		 b2.setBounds(175,340,90,20);
 		panel.add(b2);
 			
 		disLabel = new JLabel("Diagnosis :");
-		disLabel.setBounds(75,360,90,20);
+		disLabel.setBounds(75,390,90,20);
 		panel.add(disLabel);
 			
 		disTF = new JTextField();
-		disTF.setBounds(172,360,200,20);
+		disTF.setBounds(172,390,200,20);
 		panel.add(disTF);
 			
 		depLabel = new JLabel("Deposite :");
-		depLabel.setBounds(75,390,90,20);
+		depLabel.setBounds(75,420,90,20);
 		panel.add(depLabel);
 			
 		depTF = new JTextField();
-		depTF.setBounds(172,390,200,20);
+		depTF.setBounds(172,420,200,20);
 		panel.add(depTF);
 			
 		addBtn = new JButton("ADD");
@@ -215,11 +227,42 @@ public class AddPatient extends JFrame implements MouseListener, ActionListener{
 	
 	public void actionPerformed(ActionEvent ae){
 		String command = ae.getActionCommand();
-		    if (ae.getSource() == addBtn) {
+		    if (addBtn.getText().equals(command)){
+				String pId = pIdTF.getText();
+				String PName = pnTF.getText();
+				String Mobile = mbTF.getText();
+				String age = ageTF.getText();
+				String address = addTF.getText(); 
+				String Diagnosis = disTF.getText();
+				String Deposite = depTF.getText();
+				
+				String gender = "", room = "", appDoctor = "";
+				if(a1.isSelected()){ gender = "Male"; }
+				else if(a2.isSelected()){ gender = "Female"; }
+				else if(a3.isSelected()){ gender = "Other"; }
+				
+				
+				appDoctor = b1.getSelectedItem().toString();
+				room = b2.getSelectedItem().toString();
+				if(!pId.isEmpty() && !PName.isEmpty() && !Mobile.isEmpty() && !gender.isEmpty() && !age.isEmpty()  && !address.isEmpty() && !appDoctor.isEmpty() && !room.isEmpty()  && !Diagnosis.isEmpty()  && !Deposite.isEmpty()){
+					
+					//System.out.println("ck");
+					Patient p = new Patient (pId, PName, Mobile, gender, age, address, appDoctor, room, Diagnosis, Deposite);
+					
+					pl.addPatient(p);
+					
+					
 					JOptionPane.showMessageDialog(this, "Patient added succeassful");
 					Menu menu = new Menu();
 					menu.setVisible(true);
 					this.setVisible(false);
+					
+					
+				}else {
+					JOptionPane.showMessageDialog(this, "Some field is empty!");
+				}
+				
+				
             }
 		
 			else if (ae.getSource() == bckBtn){
@@ -228,11 +271,7 @@ public class AddPatient extends JFrame implements MouseListener, ActionListener{
 					pin.setVisible(true);
 					this.setVisible(false);		
 			}
-
-		
-		
-		
-		
+	
 		
 	}
 }

@@ -17,7 +17,7 @@ public class DrLogin extends JFrame implements MouseListener, ActionListener{
 	
 	
 	public DrLogin(RegDoctorList rdl){
-		super("HealthMate");
+		super("HealthMate - Doctor Login");
 		this.setSize(900,600);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setLocationRelativeTo(null);
@@ -152,27 +152,11 @@ public class DrLogin extends JFrame implements MouseListener, ActionListener{
 		
 	public void actionPerformed(ActionEvent ae){
 		String command = ae.getActionCommand();
-		/*if(lgnBtn.getText().equals(command)){
-			String uname = userTF.getText();
-			String pass = passTF.getText();
-			if(uname.isEmpty() || pass.isEmpty()){
-				JOptionPane.showMessageDialog(this, "Username/password required!");
-			}else{
-				if(uname.equals("admin") && pass.equals("admin")){
-					JOptionPane.showMessageDialog(this, "Login Successful!");
-					Menu me = new Menu(uname,pass);
-					me.setVisible(true);
-					this.setVisible(false);
-				}else{
-					JOptionPane.showMessageDialog(this, "Invalid credentials!");
-				}
-			}*/
-		/*if(lgnBtn.getText().equals(command));{
-			Menu menu = new Menu();
-			menu.setVisible(true);
-			this.setVisible(false);*/
 			
-			if(lgnBtn.getText().equals(command));{
+			if(ae.getSource() == exitBtn){
+			System.exit(0);
+			}
+			else if(lgnBtn.getText().equals(command));{
 			String name = userTF.getText();
 			String pass = passTF.getText();
 			
@@ -180,7 +164,7 @@ public class DrLogin extends JFrame implements MouseListener, ActionListener{
 				
 				int index = rdl.doctorExists(name);
 				if(index == -1){
-					JOptionPane.showMessageDialog(this, "User not found!");
+					JOptionPane.showMessageDialog(this, "There is no doctor in this name!");
 				}else{
 					Doctor d = rdl.checkPassword(index, pass);
 					if( d == null){
@@ -197,16 +181,8 @@ public class DrLogin extends JFrame implements MouseListener, ActionListener{
 			}
 			
 		}	
-		if(exitBtn.getText().equals(command)){
-			System.exit(0);
-		}
+		
 		
 	}
-	
-	/*public static void main(String []args){
-		RegDoctorList rdl = new RegDoctorList();
-		DrLogin lg =  new DrLogin(rdl);
-		lg.setVisible(true);
-	}*/
 	
 }

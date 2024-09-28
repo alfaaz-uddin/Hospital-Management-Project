@@ -95,7 +95,7 @@ public class Menu extends JFrame implements MouseListener,ActionListener{
 		
 		imgLabel = new JLabel(img);
 		//imgLabel.setBounds(500,150,256,256);
-		imgLabel.setBounds(350,150,256,256);
+		imgLabel.setBounds(500,150,256,256);
 		panel.add(imgLabel);
 		
 		titleLabel = new JLabel("“Health is not valued till sickness comes”");
@@ -104,29 +104,11 @@ public class Menu extends JFrame implements MouseListener,ActionListener{
 		panel.add(titleLabel);
 		panel.add(titleLabel);
 		
-		userLabel = new JLabel("Welcome back,");
-		userLabel.setBounds(700,90,100,40);
+		userLabel = new JLabel("Welcome back, admin");
+		userLabel.setBounds(700,90,130,40);
 		panel.add(userLabel);
 		
-		sumLabel = new JLabel("At a glance:- ");
-		sumLabel.setBounds(700,120,80,40);
-		sumLabel.setFont(font3);
-		sumLabel.setForeground(Color.RED);
-		panel.add(sumLabel);
 		
-
-		tAddLabel = new JLabel("Total Admission: ");
-		tAddLabel.setBounds(700,150,110,40);
-		panel.add(tAddLabel);
-		
-		tDisLabel = new JLabel("Total Discharge: ");
-		tDisLabel.setBounds(700,170,110,40);
-		panel.add(tDisLabel);
-
-		//RegDoctorList rdl = new RegDoctorList();
-		tDrLabel = new JLabel("Doctor Checkin: ");//+rdl.getDoctorCount()
-		tDrLabel.setBounds(700,190,110,40);
-		panel.add(tDrLabel);
 		
 		panel.setBackground(color1);
 		this.add(panel);
@@ -181,7 +163,8 @@ public class Menu extends JFrame implements MouseListener,ActionListener{
 	public void actionPerformed(ActionEvent ae){
 		String command = ae.getActionCommand();
 		if (ae.getSource() == npBtn) {
-			AddPatient ap = new AddPatient();
+			PList pl = new PList();
+			AddPatient ap = new AddPatient(pl);
 			ap.setVisible(true);
 			this.setVisible(false);
         } else if (ae.getSource() == dpBtn) {
@@ -198,8 +181,8 @@ public class Menu extends JFrame implements MouseListener,ActionListener{
 			this.setVisible(false);
 		}
 		else if (ae.getSource() == drInfoBtn) {
-			DrMenu dm = new DrMenu();
-			dm.setVisible(true);
+			DoctorList dl = new DoctorList();
+			dl.setVisible(true);
 			this.setVisible(false);
 		} else if (ae.getSource() == contBtn) {
 			Contribution co = new Contribution();
