@@ -6,7 +6,7 @@ public class Person {
 	private String address;
 
     // Constructor
-    public Person(String id,String name,String gender,String mobileNo) {
+    public Person(String id,String name,String mobileNo,String gender) {
 		this.id = id;
         this.name = name;
         this.mobileNo = mobileNo;

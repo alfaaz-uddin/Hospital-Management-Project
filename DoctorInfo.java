@@ -10,7 +10,7 @@ public class DoctorInfo extends JFrame implements MouseListener,ActionListener{
 	JPasswordField passTF;
 	JButton add, back;
 	JRadioButton r1,r2,r3;
-	JComboBox langs;
+	JComboBox dept;
 	Color color1,color2;
 	Font font1, font2, font3,font4;
 	ImageIcon img;

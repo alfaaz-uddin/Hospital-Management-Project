@@ -3,7 +3,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class PtDischarge extends JFrame  implements  ActionListener  {
+public class Discharge extends JFrame  implements  ActionListener  {
 	
 	JLabel nameLabel,pdLabel,ptnLabel,roomLabel,adLabel,billLabel,imgLabel, srchLabel;
 	JTextField ptnTF, roomTF,addTF,billTF,srchTF,ptTF;
@@ -14,19 +14,19 @@ public class PtDischarge extends JFrame  implements  ActionListener  {
 	Color color1;
 	ImageIcon img,icon;
 	JPanel panel;
-	/*Patient p;
-	PList  pl;*/
-	public PtDischarge(){
+	Patient p;
+	PList  pl;
+	public Discharge(Patient p,PList pl){
 		super("HealthMate");
 		this.setSize(900,600);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setLocationRelativeTo(null);
 		icon = new ImageIcon("iconn.png");
 		this.setIconImage(icon.getImage());
-		/*this.pl = pl;
-		this.pl = pl;*/
-		
+		this.p = p;
+		this.pl = pl;
 	
+		
 		font1 = new Font("Biome",Font.BOLD, 30);
 		font2 = new Font("Biome",Font.BOLD, 18);
 		font3 = new Font("Biome",Font.BOLD, 14);
@@ -70,7 +70,7 @@ public class PtDischarge extends JFrame  implements  ActionListener  {
 		
 		//String name[] = {"Jitu", "Alfaz", "Shamim","Riyad" };
 		
-		ptTF = new JTextField();
+		ptTF = new JTextField(p.getName());
 		ptTF.setBounds(225,226,150,20);
 		panel.add(ptTF);
 		
@@ -80,7 +80,7 @@ public class PtDischarge extends JFrame  implements  ActionListener  {
 		panel.add(roomLabel);
 		
 		
-		roomTF = new JTextField();
+		roomTF = new JTextField(p.getRoom());
 		roomTF.setBounds(225,260,150,20);
 		panel.add(roomTF);
 		
@@ -90,7 +90,7 @@ public class PtDischarge extends JFrame  implements  ActionListener  {
 		panel.add(adLabel);
 		
 		
-		addTF = new JTextField();
+		addTF = new JTextField(p.getAppointedDoctor());
 		addTF.setBounds(225,295,150,20);
 		panel.add(addTF); 
 		
@@ -101,7 +101,7 @@ public class PtDischarge extends JFrame  implements  ActionListener  {
 		panel.add(billLabel);
 		
 		
-		billTF = new JTextField();
+		billTF = new JTextField(p.getDeposite());
 		billTF.setBounds(225,330,150,20);
 		panel.add(billTF);
 		
@@ -158,45 +158,43 @@ public class PtDischarge extends JFrame  implements  ActionListener  {
 		
 		if(srchBtn.getText().equals(command)){
 			String name = srchTF.getText ();
-			PList pl = new PList();
 			if(!name.isEmpty()){
 				int index = pl.searchPatient(name);
 			if(index == -1){
 				JOptionPane.showMessageDialog(this , "Patient does not exist !");
 			}else {
 				Patient p = pl.getPatient(index);
-				//JOptionPane.showMessageDialog(this,"Patient Discharged Successfully");
-				Discharge ptd = new Discharge(p, pl);
-				ptd.setVisible(true);
-				this.setVisible(false);
+				JOptionPane.showMessageDialog(this,"Patient Discharged Successfully");
+				
 			   }
 			}
 			
 		}
-	/*	if(disBtn.getText().equals(command));{
-			//JOptionPane.showMessageDialog(this, "The Patient has been discharged successfully");
-			pl.deletePatient(p);
-			JOptionPane.showMessageDialog(this, "Account deleted. Redirecting to Login page.");
+		if(disBtn.getText().equals(command)){
+			int dialog = JOptionPane.YES_NO_OPTION;
+			int result = JOptionPane.showConfirmDialog(this, "Are you sure you want to Discharged?", "Discharged Patient?", dialog);
+			if(result == 0){
+				pl.deletePatient(p);
 			
-			Login lgn = new Login();
-			lgn.setVisible(true);
-			this.setVisible(false);
-			
-			
+				Menu me = new Menu();
+				me.setVisible(true);
+				this.setVisible(false);
+			}else{}
 		}	
 		if (ae.getSource() == bckBtn){
-			//JOptionPane.showMessageDialog(this, "The Patient has been discharged successfully");
+			
 			Menu me = new Menu();
 			me.setVisible(true);
 			this.setVisible(false);	
 				
-		} */
+		} 
 	
    }
-  /* public static void main (String []args){
-		//Menu pl = new PList();
-		//PtDischarge up = new PtDischarge(Patient p,PList pl);
-		//up.setVisible(true);
+ /*  public static void main (String []args){
+		PList pl = new PList(); 
+    	Patient p = new Patient(); 
+    	Discharge up = new Discharge(p, pl);
+		up.setVisible(true);
 		
 			
 	}*/

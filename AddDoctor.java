@@ -13,7 +13,7 @@ public class AddDoctor extends JFrame implements MouseListener,ActionListener{
 	JButton add, backBtn;
 	ButtonGroup bg1;
 	JRadioButton r1,r2,r3;
-	JComboBox langs;
+	JComboBox dept;
 	Color color1,color2;
 	Font font1, font2, font3, font4;
 	ImageIcon img;
@@ -105,9 +105,9 @@ public class AddDoctor extends JFrame implements MouseListener,ActionListener{
 		panel.add(programLabel);
 		
 		String items[] = {"MEDICINE","CARDIOLOGY", "NEUROSURGERY", "ONCOLOGIST", "ORTHOPEDICS","SURGERY","PSYCHIATRY","ANESTHESIOLOGY"};
-		langs = new JComboBox(items);
-		langs.setBounds(170,250,200,20);
-		panel.add(langs);
+		dept = new JComboBox(items);
+		dept.setBounds(170,250,200,20);
+		panel.add(dept);
 		
 		userLabel = new JLabel("Joining Date: ");
 		userLabel.setBounds(75,240,100,100); 
@@ -211,7 +211,7 @@ public class AddDoctor extends JFrame implements MouseListener,ActionListener{
 			
 			
 			String department ="", gender = "";
-			department = langs.getSelectedItem().toString();
+			department = dept.getSelectedItem().toString();
 			
 			
 			

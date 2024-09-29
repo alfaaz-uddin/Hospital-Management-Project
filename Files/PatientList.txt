@@ -1,66 +1,22 @@
-1001
-Jitu
-Male
-549797
-25
- vadhguad
-Dr.Kazi
-103
-haga
-10
+PID10010
+abc
+015
+Female
+12
+ads
+Dr.Alfaz
+G-304
+adsad
+5
 
-1002
-Shamim
+PID10016
+yo yo
+0145
 Male
-164+65
-69
-bjabdjd
-Dr.Kazi
-103
-haga + bomi
-20
-
-10058
-Test pt 
-Male
-24664
-25
-wbdg
-Dr. Alfaz
-103
-gugwu
-qbeghq
-
-100056
-Shamim
-Male
-2+5+5+5
 21
-Kuratoli
-Dr. Alfaz
-102
-Haga
+kk
+Dr.Alfaz
+G-305
+Cold
 100
-
-10503
-Mr. X
-Male
-7484
-25
-US
-Dr. Alfaz
-103
-Headache
-100
-
-10025
-Mr. Potter
-Male
-6656464
-25
-Hogwarts
-Dr. Alfaz
-103
-Loose stool
-kdj
 

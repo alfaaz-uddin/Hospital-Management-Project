@@ -47,7 +47,7 @@ public class DoctorList extends JFrame implements ActionListener {
 		//table.setBackground(new Color(182, 224, 232));
 		
        
-		model.addColumn("ID");
+		model.addColumn("Doctor ID");
         model.addColumn("Name");
         model.addColumn("Department");
 

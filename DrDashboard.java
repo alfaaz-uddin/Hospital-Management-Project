@@ -134,7 +134,8 @@ public class DrDashboard extends JFrame implements ActionListener{
 				JOptionPane.showMessageDialog(this, "Your patient list has downloaded. Check the Download folder");
 				PList ptList = new PList();
 				String PatList ="Your Patient List -- " + "\n" + "\n";
-				for(Patient patient : ptList.patientList){
+				for(int i = 0; i < ptList.patientList.length; i++){
+				Patient patient = ptList.patientList[i];
 				if (patient != null && patient.getAppointedDoctor() != null && patient.getAppointedDoctor().equals(dName)){
 				  PatList +=  "Patient ID : "+patient.getId() + "\n" + "Patient Name : " + patient.getName() + "\n" + "Room NO : " + patient.getRoom() + "\n" + "Diagnosis : " + patient.getDiagnosis() + "\n" + "\n";
 				}}

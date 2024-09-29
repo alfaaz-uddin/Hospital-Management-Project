@@ -83,7 +83,13 @@ public class RegDoctorList{
 		return doctorList[index];
 	}
 	
-	//String DList[] = doctorList[].getName;
+	public String[] getDoctorNames() {
+    String doctorNames [] = new String[doctorCount];
+    for (int i = 0; i < doctorCount; i++) {
+        doctorNames[i] = "Dr. "+doctorList[i].getName();
+    }
+    return doctorNames;
+}
 
 	
 	/*public void deleteDoctor(Doctor d){
