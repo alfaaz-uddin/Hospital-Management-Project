@@ -149,7 +149,7 @@ public class AddDoctor extends JFrame implements MouseListener,ActionListener{
 		back.addActionListener(this);
 		panel.add(back);
 		
-		img = new ImageIcon("emp-info.png");
+		img = new ImageIcon("images/emp-info.png");
 		
 		imgLabel = new JLabel(img);
 		imgLabel.setBounds(485,100,300,300);

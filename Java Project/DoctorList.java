@@ -50,7 +50,7 @@ public class DoctorList extends JFrame{
 		//back.addActionListener(this);
 		panel.add(back);
 		
-		img = new ImageIcon("emp-info.png");
+		img = new ImageIcon("images/emp-info.png");
 		imgLabel = new JLabel(img);
 		imgLabel.setBounds(485,100,300,300);
 		panel.add(imgLabel);

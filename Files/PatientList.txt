@@ -1,11 +1,11 @@
 PID10010
 abc
 015
-Female
+Male
 12
 ads
-Dr.Alfaz
-G-304
+Dr. Kazi
+G-303
 adsad
 5
 

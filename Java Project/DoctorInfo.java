@@ -113,7 +113,7 @@ public class DoctorInfo extends JFrame implements MouseListener,ActionListener{
 		back.addActionListener(this);
 		panel.add(back);
 		
-		img = new ImageIcon("emp-add1.png");
+		img = new ImageIcon("images/emp-add1.png");
 		
 		imgLabel = new JLabel(img);
 		imgLabel.setBounds(485,100,300,300);
