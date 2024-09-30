@@ -23,7 +23,7 @@ public class Discharge extends JFrame  implements  ActionListener  {
 		this.setSize(900,600);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setLocationRelativeTo(null);
-		icon = new ImageIcon("iconn.png");
+		icon = new ImageIcon("images/icon.png");
 		this.setIconImage(icon.getImage());
 		this.p = p;
 		this.pl = pl;
@@ -103,7 +103,7 @@ public class Discharge extends JFrame  implements  ActionListener  {
 		panel.add(billLabel);
 		
 		
-		billTF = new JTextField(p.getdeposite());
+		billTF = new JTextField(p.getDeposit());
 		billTF.setBounds(225,330,150,20);
 		panel.add(billTF);
 		
@@ -174,7 +174,7 @@ public class Discharge extends JFrame  implements  ActionListener  {
 		}
 		if(disBtn.getText().equals(command)){
 			int dialog = JOptionPane.YES_NO_OPTION;
-			int result = JOptionPane.showConfirmDialog(this, "Are you sure you want to Discharged?", "Discharged Patient?", dialog);
+			int result = JOptionPane.showConfirmDialog(this, "Are you sure you want to Discharge?", "Discharge Patient?", dialog);
 			if(result == 0){
 				pl.deletePatient(p);
 			

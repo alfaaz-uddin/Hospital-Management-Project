@@ -88,9 +88,11 @@ public class RegDoctorList{
 	public String[] getDoctorNames() {
     String doctorNames [] = new String[doctorCount];
     for (int i = 0; i < doctorCount; i++) {
+		if (doctorNames!= null && doctorList[i]!= null){
         doctorNames[i] = "Dr. "+doctorList[i].getName();
-    }
+    }}
     return doctorNames;
+	
 }
 
 	

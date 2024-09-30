@@ -14,7 +14,7 @@ public class AddPatient extends JFrame implements MouseListener, ActionListener{
 	ButtonGroup gBtn;
 	JComboBox b1, b2;
 	Color c1,c2,c3;
-	ImageIcon img;
+	ImageIcon img, icon;
 	Font f1, f2;
 	JPanel panel;
 	PList pl;
@@ -23,6 +23,8 @@ public class AddPatient extends JFrame implements MouseListener, ActionListener{
 	public AddPatient(PList pl){
 		super("HealthMate");
 		this.setSize(900,600);
+		icon = new ImageIcon("images/icon.png");
+		this.setIconImage(icon.getImage());
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setLocationRelativeTo(null);
 		this.pl = pl;
@@ -146,7 +148,7 @@ public class AddPatient extends JFrame implements MouseListener, ActionListener{
 		disTF.setBounds(172,390,200,20);
 		panel.add(disTF);
 			
-		depLabel = new JLabel("deposite :");
+		depLabel = new JLabel("Deposit :");
 		depLabel.setBounds(75,420,90,20);
 		panel.add(depLabel);
 			
@@ -239,7 +241,7 @@ public class AddPatient extends JFrame implements MouseListener, ActionListener{
 				String age = ageTF.getText();
 				String address = addTF.getText(); 
 				String Diagnosis = disTF.getText();
-				String deposite = depTF.getText();
+				String deposit = depTF.getText();
 				
 				String gender = "", room = "", appDoctor = "";
 				if(a1.isSelected()){ gender = "Male"; }
@@ -249,10 +251,10 @@ public class AddPatient extends JFrame implements MouseListener, ActionListener{
 				
 				appDoctor = b1.getSelectedItem().toString();
 				room = b2.getSelectedItem().toString();
-				if(!pId.isEmpty() && !PName.isEmpty() && !Mobile.isEmpty() && !gender.isEmpty() && !age.isEmpty()  && !address.isEmpty() && !appDoctor.isEmpty() && !room.isEmpty()  && !Diagnosis.isEmpty()  && !deposite.isEmpty()){
+				if(!pId.isEmpty() && !PName.isEmpty() && !Mobile.isEmpty() && !gender.isEmpty() && !age.isEmpty()  && !address.isEmpty() && !appDoctor.isEmpty() && !room.isEmpty()  && !Diagnosis.isEmpty()  && !deposit.isEmpty()){
 					
 					//System.out.println("ck");
-					Patient p = new Patient ( pId, PName, Mobile, gender, age, address, appDoctor, room, Diagnosis, deposite);
+					Patient p = new Patient ( pId, PName, Mobile, gender, age, address, appDoctor, room, Diagnosis, deposit);
 					
 					pl.addPatient(p);
 					

@@ -147,11 +147,11 @@ public class Update extends JFrame implements MouseListener, ActionListener{
 		disTF.setBounds(172,390,200,20);
 		panel.add(disTF);
 			
-		depLabel = new JLabel("deposite :");
+		depLabel = new JLabel("Deposit :");
 		depLabel.setBounds(75,420,90,20);
 		panel.add(depLabel);
 			
-		depTF = new JTextField(p.getdeposite());
+		depTF = new JTextField(p.getDeposit());
 		depTF.setBounds(172,420,200,20);
 		panel.add(depTF);
 			
@@ -232,14 +232,19 @@ public class Update extends JFrame implements MouseListener, ActionListener{
 	
 	public void actionPerformed(ActionEvent ae){
 		String command = ae.getActionCommand();
-		   if(upBtn.getText().equals(command));{
+		 if (ae.getSource() == bckBtn){
+					Menu me = new Menu();
+					me.setVisible(true);
+					this.setVisible(false);
+			}
+		  else if(upBtn.getText().equals(command));{
 			String pId = pIdTF.getText();
 			String PName = pnTF.getText();
 			String Mobile = mbTF.getText();
 			String age = ageTF.getText();
 			String address = addTF.getText();
 			String Diagnosis = disTF.getText();
-			String deposite =  depTF.getText();
+			String deposit =  depTF.getText();
 			
 		
 			String gender = "", room = "", appDoctor = "";
@@ -251,7 +256,7 @@ public class Update extends JFrame implements MouseListener, ActionListener{
 			appDoctor = b1.getSelectedItem().toString();
 			room = b2.getSelectedItem().toString();
 			if(!pId.isEmpty() && !PName.isEmpty() && !Mobile.isEmpty() && !gender.isEmpty() && !age.isEmpty() 
-			   && !address.isEmpty() && !appDoctor.isEmpty() && !room.isEmpty() && !Diagnosis.isEmpty() && !deposite.isEmpty()){
+			   && !address.isEmpty() && !appDoctor.isEmpty() && !room.isEmpty() && !Diagnosis.isEmpty() && !deposit.isEmpty()){
 				int dialog = JOptionPane.YES_NO_OPTION;
 				int result = JOptionPane.showConfirmDialog(this, "Are you sure to update patient informations?", "Patient update?", dialog);
 				if(result == 0){
@@ -265,10 +270,10 @@ public class Update extends JFrame implements MouseListener, ActionListener{
 										     p.getAppointedDoctor() + "\n" +
 										     p.getRoom() + "\n" + 
 										     p.getDiagnosis() + "\n" + 
-										     p.getdeposite() + "\n" ;
+										     p.getDeposit() + "\n" ;
 										 
 					//p.setId(pId);
-					System.out.println(PName + Mobile + age + gender + address + appDoctor+ room+Diagnosis + deposite);
+					System.out.println(PName + Mobile + age + gender + address + appDoctor+ room+Diagnosis + deposit);
 					p.setName(PName);
 					p.setMobileNo(Mobile);
 					p.setAge(age);
@@ -277,7 +282,7 @@ public class Update extends JFrame implements MouseListener, ActionListener{
 					p.setAppointedDoctor(appDoctor);
 					p.setRoom(room);
 					p.setDiagnosis(Diagnosis);
-					p.setdeposite(deposite);
+					p.setDeposit(deposit);
 					
 					
 					System.out.println("Patient to update: \n"+patientToUpdate+"\n");
@@ -296,18 +301,12 @@ public class Update extends JFrame implements MouseListener, ActionListener{
 				}else{
 					//do nothing
 				}
-			}else{
-				JOptionPane.showMessageDialog(this, "Not all inptuts are given");
 			}
 			
-		}
+		}/*else{
+				JOptionPane.showMessageDialog(this, "Not all inptuts are given");
+			}*/
 		
-			 if (ae.getSource() == bckBtn){
-					Menu me = new Menu();
-					me.setVisible(true);
-					this.setVisible(false);
-			}
-	
 		
 	}
 }

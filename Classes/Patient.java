@@ -6,10 +6,10 @@ public class Patient extends Person {
     private String appointedDoctor;
     private String room;
     private String diagnosis;
-	private String deposite;
+	private String deposit;
 
     
-    public Patient( String id, String name, String mobileNo, String gender, String age, String address, String appointedDoctor, String room, String diagnosis,String deposite) {
+    public Patient( String id, String name, String mobileNo, String gender, String age, String address, String appointedDoctor, String room, String diagnosis,String deposit) {
         super(id,name,mobileNo,gender);
 		
 		this.age = age;
@@ -17,7 +17,7 @@ public class Patient extends Person {
         this.appointedDoctor = appointedDoctor;
         this.room = room;
         this.diagnosis = diagnosis;
-		this.deposite = deposite;
+		this.deposit = deposit;
     }
 
   
@@ -63,12 +63,12 @@ public class Patient extends Person {
         this.diagnosis = diagnosis;
     }
 	
-	public String getdeposite() {
-        return deposite;
+	public String getDeposit() {
+        return deposit;
     }
 
-    public void setdeposite(String deposite) {
-        this.deposite = deposite;
+    public void setDeposit(String deposit) {
+        this.deposit = deposit;
     }
 	
 	

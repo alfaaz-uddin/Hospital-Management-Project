@@ -13,16 +13,13 @@ public class UpPatient extends JFrame implements MouseListener, ActionListener{
 	ImageIcon img;
 	Font f1, f2, f3, f4;
 	JPanel panel;
-	//Patient p;
-	//PList pl;
 		
 	public UpPatient(){
 		super("HealthMate");
 		this.setSize(900,600);	
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setLocationRelativeTo(null);
-		//this.p = p;
-		//this.pl = pl;
+
 		
 		c1 = new Color(143,207,225);
 		c2 = new Color(118,235,65);
@@ -34,16 +31,12 @@ public class UpPatient extends JFrame implements MouseListener, ActionListener{
 			
 		panel = new JPanel();
 		panel.setLayout(null);
-			
-			
-			
-			
+		
 		hosLabel = new JLabel("HealthMate");
 		hosLabel.setBounds(360,30,600,50);
 		hosLabel.setFont(f1);
 		panel.add(hosLabel);
-			
-			
+		
 		upLabel = new JLabel("Update Patient Information ");
 		upLabel.setBounds(335,70,400,50);
 		upLabel.setFont(f2);
@@ -69,7 +62,7 @@ public class UpPatient extends JFrame implements MouseListener, ActionListener{
 		srchBtn.addActionListener(this);
 		panel.add(srchBtn);
 			
-		upBtn = new JButton("UPDATE");
+		upBtn = new JButton(" ");
 		upBtn.setBounds(180,470,88,40);
 		upBtn.setBackground(Color.BLACK);
 		upBtn.setForeground(Color.WHITE);
@@ -90,12 +83,7 @@ public class UpPatient extends JFrame implements MouseListener, ActionListener{
 		imgLabel.setBounds(510,100,300,300);
 		panel.add(imgLabel);
 			
-			
-			
-			
-			
 		panel.setBackground(c1);
-			
 			
 		this.add(panel);
 	}
@@ -113,7 +101,6 @@ public class UpPatient extends JFrame implements MouseListener, ActionListener{
 			bckBtn.setForeground(Color.BLACK);
 		}
 	    
-	 
 		if(me.getSource () == upBtn){
 			upBtn.setBackground(c2);
 			upBtn.setForeground(Color.BLACK);
@@ -122,7 +109,6 @@ public class UpPatient extends JFrame implements MouseListener, ActionListener{
 			bckBtn.setBackground(Color.RED);
 			bckBtn.setForeground(Color.BLACK);
 		}
-		 
 	}
 	 
 	public void mouseExited(MouseEvent me){
@@ -135,7 +121,6 @@ public class UpPatient extends JFrame implements MouseListener, ActionListener{
 			bckBtn.setForeground(Color.BLACK);
 		}
 	    
-	 
 		if(me.getSource () == upBtn){
 			upBtn.setBackground(Color.BLACK);
 			upBtn.setForeground(Color.WHITE);
@@ -144,7 +129,6 @@ public class UpPatient extends JFrame implements MouseListener, ActionListener{
 			bckBtn.setBackground(Color.BLACK);
 			bckBtn.setForeground(Color.WHITE);
 		}
-		
 		
 	}
 		
@@ -164,7 +148,6 @@ public class UpPatient extends JFrame implements MouseListener, ActionListener{
 				JOptionPane.showMessageDialog(this , "Patient does not exist !");
 			}else {
 				Patient p = pl.getPatient(index);
-				//JOptionPane.showMessageDialog(this,"Patient Has Discharged Successfully");
 				Update ptd = new Update(p, pl);
 				ptd.setVisible(true);
 				this.setVisible(false);

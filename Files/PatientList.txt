@@ -1,22 +1,44 @@
 PID10010
-abc
-015
-Male
-12
-ads
-Dr. Kazi
-G-303
-adsad
-5
-
-PID10016
-yo yo
-0145
+Kazi
+0145879
 Male
 21
-kk
-Dr.Alfaz
-G-305
-Cold
+Kuratoli
+Dr. Maleka
+G-303
+Fever
 100
+
+PID10011
+Nazrul
+0136464
+Male
+42
+Dhaka
+Dr. Anique
+G-302
+Cold
+1000
+
+PID100110
+Nipa Khatun
+01565
+Female
+10
+Dhaka
+Dr. Anique
+G-304
+Fever
+1000
+
+PID100114
+Rahim
+0144796
+Male
+25
+Badda
+Dr. Anique
+G-304
+Cold
+1000
 

@@ -22,7 +22,7 @@ public class PList implements IPList {
 				String line7 = sc.nextLine();  //appDoctor
 				String line8 = sc.nextLine();  //room
 				String line9 = sc.nextLine();  //diagnosic
-				String line10 = sc.nextLine();  //deposite
+				String line10 = sc.nextLine();  //deposit
 				String line11= sc.nextLine();  
 				
 				
@@ -52,7 +52,7 @@ public class PList implements IPList {
 								p.getMobileNo() + "\n" + p.getGender() + "\n" +
 								p.getAge() + "\n" + p.getAddress() + "\n" +
 								p.getAppointedDoctor() + "\n" + p.getRoom() + "\n" +
-								p.getDiagnosis() + "\n" + p.getdeposite() + "\n" +"\n";
+								p.getDiagnosis() + "\n" + p.getDeposit() + "\n" +"\n";
 			
 		try{
 			FileWriter fw = new FileWriter("Files/PatientList.txt",true);
@@ -99,7 +99,7 @@ public class PList implements IPList {
 								 p.getMobileNo() + "\n" + p.getGender() + "\n" +
 								 p.getAge() + "\n" + p.getAddress() + "\n" +
 								 p.getAppointedDoctor() + "\n" + p.getRoom() + "\n" +
-								 p.getDiagnosis() + "\n" + p.getdeposite() + "\n" ;
+								 p.getDiagnosis() + "\n" + p.getDeposit() + "\n" ;
 		
 		try{
 			String filepath = "Files/PatientList.txt";
@@ -152,7 +152,7 @@ public class PList implements IPList {
 								updatedPatient.getAppointedDoctor() + "\n" +
 								updatedPatient.getRoom() + "\n"+
 								updatedPatient.getDiagnosis() + "\n" +
-								updatedPatient.getdeposite() + "\n";
+								updatedPatient.getDeposit() + "\n";
 								
 		System.out.println("Want to update:\n "+ updatedDetails+ "\n");
 		System.out.println("----------------------------------------");

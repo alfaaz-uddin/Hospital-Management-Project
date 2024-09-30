@@ -25,7 +25,7 @@ public class PtDischarge extends JFrame  implements  ActionListener  {
 		this.setSize(900,600);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setLocationRelativeTo(null);
-		icon = new ImageIcon("iconn.png");
+		icon = new ImageIcon("images/icon.png");
 		this.setIconImage(icon.getImage());
 		/*this.pl = pl;
 		this.pl = pl;*/
@@ -110,7 +110,6 @@ public class PtDischarge extends JFrame  implements  ActionListener  {
 		panel.add(billTF);
 		
 		
-		
 		srchBtn = new JButton("Search");
 		srchBtn.setBounds(400,170,60,20);
 		srchBtn.setFont(font5);
@@ -121,9 +120,7 @@ public class PtDischarge extends JFrame  implements  ActionListener  {
 		panel.add(srchBtn);
 		
 		
-		
-		
-		disBtn = new JButton("Discharge");
+		disBtn = new JButton(" ");
 		disBtn.setBounds(140,400,100,30);
 		disBtn.setBackground(Color.BLACK);
 		disBtn.setForeground(Color.WHITE);
@@ -160,7 +157,13 @@ public class PtDischarge extends JFrame  implements  ActionListener  {
 	public void actionPerformed(ActionEvent ae){
 		String command = ae.getActionCommand();
 		
-		if(srchBtn.getText().equals(command)){
+		if (ae.getSource() == bckBtn){
+			Menu me = new Menu();
+			me.setVisible(true);
+			this.setVisible(false);	
+				
+		} 
+			else if(srchBtn.getText().equals(command)){
 			String name = srchTF.getText ();
 			PList pl = new PList();
 			if(!name.isEmpty()){
@@ -177,32 +180,10 @@ public class PtDischarge extends JFrame  implements  ActionListener  {
 			}
 			
 		}
-	/*	if(disBtn.getText().equals(command));{
-			//JOptionPane.showMessageDialog(this, "The Patient has been discharged successfully");
-			pl.deletePatient(p);
-			JOptionPane.showMessageDialog(this, "Account deleted. Redirecting to Login page.");
+		if(disBtn.getText().equals(command));{
 			
-			Login lgn = new Login();
-			lgn.setVisible(true);
-			this.setVisible(false);
-			
-			
-		}	
-		if (ae.getSource() == bckBtn){
-			//JOptionPane.showMessageDialog(this, "The Patient has been discharged successfully");
-			Menu me = new Menu();
-			me.setVisible(true);
-			this.setVisible(false);	
-				
-		} */
+		
+		} 
 	
    }
-  /* public static void main (String []args){
-		//Menu pl = new PList();
-		//PtDischarge up = new PtDischarge(Patient p,PList pl);
-		//up.setVisible(true);
-		
-			
-	}*/
-
 }
