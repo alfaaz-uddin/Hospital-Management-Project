@@ -56,10 +56,12 @@ public class DoctorList extends JFrame implements ActionListener {
         RegDoctorList regDoctorList = new RegDoctorList();
 		//String title = new String ("Dr. ");
 		String title = "Dr. ";
-        for (Doctor doctor : regDoctorList.doctorList) {
+        for(int i = 0; i < regDoctorList.doctorList.length; i++){
+			Doctor doctor = regDoctorList.doctorList[i]; {
             if (doctor != null) {
                 model.addRow(new Object[]{doctor.getId(), title + doctor.getName(), doctor.getDepartment()});
             }
+        }
         }
 
         

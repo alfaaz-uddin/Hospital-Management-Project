@@ -84,8 +84,7 @@ public class DrDashboard extends JFrame implements ActionListener{
 		
 		PList ptList = new PList();
 		//String title = new String ("Dr. ");
-		//String title = "Dr. ";
-        //for (Patient patient : ptList.patientList) 
+		//String title = "Dr. "; 
 		for(int i = 0; i < ptList.patientList.length; i++){
 			Patient patient = ptList.patientList[i];
             if (patient != null && patient.getAppointedDoctor().equals(dName)) {

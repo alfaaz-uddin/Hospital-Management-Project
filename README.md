@@ -10,3 +10,7 @@ In this  project -
 -Doctors can Register by filling the required informations.
 -Doctors can login to their dashboard and can see the patients assigned to them.
 -Doctors can download their patient list in .doc file.
+
+![alt text](image.png)
+![alt text](image-1.png)
+![alt text](image-2.png)
