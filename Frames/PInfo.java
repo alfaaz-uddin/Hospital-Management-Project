@@ -11,7 +11,7 @@ public class PInfo extends JFrame implements ActionListener {
     JButton back;
     Color color1, color2;
     Font font1, font4;
-    ImageIcon img;
+    ImageIcon img, icon;
     JPanel panel;
     JTable table;
     DefaultTableModel model;
@@ -19,6 +19,8 @@ public class PInfo extends JFrame implements ActionListener {
     public PInfo() {
         super("Patient List");
         this.setSize(900, 600);
+        icon = new ImageIcon("images/icon.png");
+		this.setIconImage(icon.getImage());
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setLocationRelativeTo(null);
 

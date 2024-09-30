@@ -1,14 +1,3 @@
-PID10010
-Kazi
-0145879
-Male
-21
-Kuratoli
-Dr. Maleka
-G-303
-Fever
-100
-
 PID10011
 Nazrul
 0136464
@@ -41,4 +30,15 @@ Dr. Anique
 G-304
 Cold
 1000
+
+PID10014
+Jabir
+014687
+Male
+25
+Badda
+Dr. Shamim
+G-304
+Cold
+2000
 

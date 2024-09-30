@@ -10,13 +10,15 @@ public class UpPatient extends JFrame implements MouseListener, ActionListener{
 	JTextField srchTF;
 	JButton upBtn, bckBtn, srchBtn;
 	Color c1,c2,c3;
-	ImageIcon img;
+	ImageIcon img, icon;
 	Font f1, f2, f3, f4;
 	JPanel panel;
 		
 	public UpPatient(){
 		super("HealthMate");
 		this.setSize(900,600);	
+		icon = new ImageIcon("images/icon.png");
+		this.setIconImage(icon.getImage());
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setLocationRelativeTo(null);
 

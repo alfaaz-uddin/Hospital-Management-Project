@@ -14,7 +14,7 @@ public class Update extends JFrame implements MouseListener, ActionListener{
 	ButtonGroup gBtn;
 	JComboBox b1, b2;
 	Color c1,c2,c3;
-	ImageIcon img;
+	ImageIcon img, icon;
 	Font f1, f2;
 	JPanel panel;
 	Patient p;
@@ -24,6 +24,8 @@ public class Update extends JFrame implements MouseListener, ActionListener{
 	public Update(Patient p, PList pl){
 		super("HealthMate");
 		this.setSize(900,600);
+		icon = new ImageIcon("images/icon.png");
+		this.setIconImage(icon.getImage());
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setLocationRelativeTo(null);
 		this.pl = pl;
