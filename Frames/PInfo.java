@@ -17,7 +17,7 @@ public class PInfo extends JFrame implements ActionListener {
     DefaultTableModel model;
 
     public PInfo() {
-        super("Patient List");
+        super("HealthMate - Patient List");
         this.setSize(900, 600);
         icon = new ImageIcon("images/icon.png");
 		this.setIconImage(icon.getImage());
@@ -38,7 +38,7 @@ public class PInfo extends JFrame implements ActionListener {
         userLabel.setFont(font1);
         panel.add(userLabel);
 
-        userLabel = new JLabel("Doctor List ");
+        userLabel = new JLabel("Patient List ");
         userLabel.setBounds(377, 70, 400, 50);
         userLabel.setFont(font4);
         panel.add(userLabel);
