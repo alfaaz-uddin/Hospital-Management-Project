@@ -12,8 +12,5 @@ In this  project -
 -Doctors can download their patient list in .doc file.
 
 ![alt text](image.png)
-![alt text](image-1.png)
+![image](https://github.com/user-attachments/assets/28885a59-628f-44d7-9b5f-3b8ca44b9e95)
 ![alt text](image-2.png)
-![alt text](image-3.png)
-![alt text](image-4.png)
-![alt text](image-5.png)
