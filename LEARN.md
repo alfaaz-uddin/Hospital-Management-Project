@@ -15,4 +15,6 @@ Download patient lists in .doc format.<br>
 Java Development Kit (JDK)<br>
 Java Swing for GUI development
 
+Download JDK https://www.oracle.com/java/technologies/downloads/
+
 ❗You must have JDK installled to run this system. Open cmd prompt from the folder and type **java Start**
