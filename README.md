@@ -4,7 +4,7 @@ This project was made for the course Object Oriented Programming-1 (Java) by the
 Team members are -  **@UDDIN, MD.ALFAZ @SHAMIM, MD. SHAFAYAT HOSSAIN @RIYAD, KAZI FARDIN RAHMAN @DAS, ANIQUE KUMAR**
 
 # Current version
-    V1.0.1
+    V1.0.1   released on   28-12-2024   by   Alfaz
   Check releases https://github.com/alfaaz-uddin/Hospital-Management-Project/releases/
 # In this  project -
 📌The admin can login and control the management system.<br>
