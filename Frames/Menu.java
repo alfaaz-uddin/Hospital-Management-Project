@@ -8,7 +8,7 @@ import Classes.*;
 
 public class Menu extends JFrame implements MouseListener,ActionListener{
 	JLabel nameLabel, titleLabel, imgLabel, userLabel, sumLabel, tAddLabel, tDisLabel, tDrLabel;
-	JButton npBtn, dpBtn, pInfoBtn, pUpBtn, drInfoBtn, lgtBtn, contBtn;
+	JButton npBtn, dpBtn, pInfoBtn, pUpBtn, drInfoBtn, lgtBtn, contBtn, bookApp, viewApp;
 	Color color1, color2;
 	ImageIcon img, icon;
 	Font font1, font2, font3;
@@ -86,8 +86,24 @@ public class Menu extends JFrame implements MouseListener,ActionListener{
 		lgtBtn.addActionListener(this);
 		panel.add(lgtBtn);
 		
-		contBtn = new JButton("Contribution");
-		contBtn.setBounds(750,500,100,20);
+		bookApp = new JButton("Book Appoinments");
+		bookApp.setBounds(690,460,150,20);
+		bookApp.setBackground(color1);
+		bookApp.setBorder(null);
+		bookApp.addMouseListener(this);
+		bookApp.addActionListener(this);
+		panel.add(bookApp);
+
+		viewApp = new JButton("View Appoinments");
+		viewApp.setBounds(690,480,150,20);
+		viewApp.setBackground(color1);
+		viewApp.setBorder(null);
+		viewApp.addMouseListener(this);
+		viewApp.addActionListener(this);
+		panel.add(viewApp);
+
+		contBtn = new JButton("View Prescriptions");
+		contBtn.setBounds(690,500,150,20);
 		contBtn.setBackground(color1);
 		contBtn.setBorder(null);
 		contBtn.addMouseListener(this);
@@ -188,10 +204,23 @@ public class Menu extends JFrame implements MouseListener,ActionListener{
 			dl.setVisible(true);
 			this.setVisible(false);
 		} else if (ae.getSource() == contBtn) {
-			Contribution co = new Contribution();
+			PrescriptionView co = new PrescriptionView();
 			co.setVisible(true);
 			this.setVisible(false);
-		} else if (ae.getSource() == lgtBtn) {
+		}
+		else if (ae.getSource() == bookApp) {
+			AppointmentList al = new AppointmentList();
+            AppointmentFrame co = new AppointmentFrame(al); 
+			co.setVisible(true);
+			this.setVisible(false);
+		}
+		else if (ae.getSource() == viewApp) {
+            AppointmentList al = new AppointmentList();
+            ViewAppointments frame = new ViewAppointments(al);
+            frame.setVisible(true);
+            this.setVisible(false);
+        }
+		 else if (ae.getSource() == lgtBtn) {
 			int dialog = JOptionPane.YES_NO_OPTION;
 			int result = JOptionPane.showConfirmDialog(this, "Are you sure to Logout?", "Logout", dialog);
 			if(result == 0){

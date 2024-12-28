@@ -1,0 +1,32 @@
+Patient ID: PID100141
+Patient Name: Lina
+Diagnosis: cold
+Doctor's Name: Dr. Alfaz
+Medicine Name: NAPA
+Dosage: 20MG
+Usage Instructions: 2 TIMES
+
+Patient ID: PID10014
+Patient Name: Mr. Potter 
+Diagnosis: Abdominal pain
+Doctor's Name: Dr. Alfaz
+Medicine Name: NAPA EXTRA
+Dosage: 20MG
+Usage Instructions: 2 TIMES
+
+Patient ID: PID10016
+Patient Name: Shamim
+Diagnosis: Headache 
+Doctor's Name: Dr. Alfaz
+Medicine Name: NAPA EXTRA  20mg 
+Dosage: 2 times
+Usage Instructions: After the meal
+
+Patient ID: PID10018
+Patient Name: Jitu
+Diagnosis: Mentally sick - 5:00PM
+Doctor's Name: Dr. Alfaz
+Medicine Name: HABIJABI
+Dosage: 500MG
+Usage Instructions: 3 TIMES
+

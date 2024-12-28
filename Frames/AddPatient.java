@@ -140,7 +140,7 @@ public class AddPatient extends JFrame implements MouseListener, ActionListener{
 		 b2.setBounds(175,340,90,20);
 		panel.add(b2);
 			
-		disLabel = new JLabel("Diagnosis :");
+		disLabel = new JLabel("Diagnosis and Appoinment :");
 		disLabel.setBounds(75,390,90,20);
 		panel.add(disLabel);
 			

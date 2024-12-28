@@ -54,7 +54,7 @@ public class PtDischarge extends JFrame  implements  ActionListener  {
 		
 		
 		
-		srchLabel = new JLabel("Search by Name: ");
+		srchLabel = new JLabel("Search by PID: ");
 		srchLabel.setBounds(100,170,170,20);
 		srchLabel.setFont(font4);
 		panel.add(srchLabel);
@@ -164,10 +164,10 @@ public class PtDischarge extends JFrame  implements  ActionListener  {
 				
 		} 
 			else if(srchBtn.getText().equals(command)){
-			String name = srchTF.getText ();
+			String id = srchTF.getText ();
 			PList pl = new PList();
-			if(!name.isEmpty()){
-				int index = pl.searchPatient(name);
+			if(!id.isEmpty()){
+				int index = pl.searchPatient(id);
 			if(index == -1){
 				JOptionPane.showMessageDialog(this , "Patient does not exist !");
 			}else {

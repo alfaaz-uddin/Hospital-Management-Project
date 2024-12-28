@@ -45,7 +45,7 @@ public class UpPatient extends JFrame implements MouseListener, ActionListener{
 		panel.add(upLabel);
 			 
 		
-		srchLabel = new JLabel("Search by Name: ");
+		srchLabel = new JLabel("Search by PID: ");
 		srchLabel.setBounds(70,200,150,20);
 		srchLabel.setFont(f3);
 		panel.add(srchLabel);

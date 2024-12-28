@@ -66,10 +66,10 @@ public class PList implements IPList {
 			
 	}
 	
-	public int searchPatient(String name){
+	public int searchPatient(String id){
 		int index = -1;
 		for(int i = 0; i<pCount; i++){
-			if(patientList[i]!= null && patientList[i].getName().equals(name)){
+			if(patientList[i]!= null && patientList[i].getId().equals(id)){
 			   index = i;
 			   break;
 			}

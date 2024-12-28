@@ -42,3 +42,58 @@ G-305
 cold
 200000
 
+PID10014
+Mr. Potter 
+123456874
+Male
+25
+Hogwarts 
+Dr. Alfaz
+G-304
+Abdominal pain
+100
+
+PID10015
+Pinky
+0147955
+Female
+25
+Badda
+Dr. Alfaz
+G-303
+Headache 
+500
+
+PID10016
+Shamim
+0165879
+Male
+21
+Kuratoli
+Dr. Alfaz
+G-302
+Headache 
+200
+
+PID100121
+Kazi Riyad
+01245
+Male
+21
+Kuratoli
+Dr. Shamim
+ICU-401
+Can't breath - 10021- 5.00PM
+5000
+
+PID10018
+Jitu
+012466
+Male
+21
+Kuratoli
+Dr. Alfaz
+G-303
+Mentally sick - 5:00PM
+200
+
