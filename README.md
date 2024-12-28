@@ -1,4 +1,4 @@
-# Hospital-Management-Project
+# Hospital Management System - HealthMate Project
 This is a Java based Hospital Management System project.
 This project was made for the course Object Oriented Programming-1 (Java) by the students of **American International University-Bangladesh (AIUB)** and guided by **UMME SADIA SALSABIL**, ***LECTURER,AIUB***.
 Team members are -  **@UDDIN, MD.ALFAZ @SHAMIM, MD. SHAFAYAT HOSSAIN @RIYAD, KAZI FARDIN RAHMAN @DAS, ANIQUE KUMAR**
